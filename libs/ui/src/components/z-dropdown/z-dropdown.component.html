@@ -1,0 +1,15 @@
+<ng-container [formGroup]="group" *ngIf="config">
+    <mat-form-field appearance="outline" class="w-full">
+        <mat-label>{{config?.name}}</mat-label>
+        <mat-select [formControl]="control" (closed)="onDropdownClosed()">
+            @for (option of config?.options; track option.key) {
+            <mat-option [value]="option.value" (onChange)="onChange($event)" id="{{option.key }}">
+                {{option?.value}}</mat-option>
+            }
+        </mat-select>
+    </mat-form-field>
+    <div *ngIf="!control?.valid && (control?.touched || control?.dirty)" class="error-message text-xs text-[#ff9d48]">
+        {{errorMessage}}
+    </div>
+
+</ng-container>

@@ -1,0 +1,75 @@
+{
+  "name": "marketing-app",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "z",
+  "sourceRoot": "apps/marketing-app/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:application",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/marketing-app",
+        "index": "apps/marketing-app/src/index.html",
+        "browser": "apps/marketing-app/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/marketing-app/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/marketing-app/src/favicon.ico",
+          "apps/marketing-app/src/assets"
+        ],
+        "styles": ["apps/marketing-app/src/styles.scss", "node_modules/ngx-toastr/toastr.css"
+      ],
+        "scripts": [],
+        "server": "apps/marketing-app/src/main.server.ts",
+        "prerender": true,
+        "ssr": {
+          "entry": "apps/marketing-app/server.ts"
+        }
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "marketing-app:build:production"
+        },
+        "development": {
+          "buildTarget": "marketing-app:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "marketing-app:build"
+      }
+    }
+  }
+}

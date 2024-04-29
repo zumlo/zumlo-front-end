@@ -1,0 +1,16 @@
+.number_feild {
+    position: relative;
+    .label_feild {
+        padding: 0px 0px 0px 30px;
+    }
+    input {
+        padding: 0px 30px;
+    }
+    &::after {
+        position: absolute;
+        content: '+1';
+        left: 16px;
+        color: #043a4ede;
+        top: 17px;
+    }
+}

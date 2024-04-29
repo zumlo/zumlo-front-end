@@ -1,0 +1,44 @@
+
+<div class="carousel3d" style="position: relative;">
+    <div style="position:relative" class="carouselInner">
+        <div class="carousel" >
+            @for (item of config; track $index) {
+                <div #cell class="carousel__cell" [ngClass]="this.selectedIndex == $index ?  'active': this.selectedIndex+1 == $index ? 'sliderImgtOne' : this.selectedIndex+2 == $index ? 'sliderImgtTwo' : '' " >
+                        <div class="sliderInner">
+                          <div class="dateTime">
+                            <p>{{item.type}}</p>
+                            <span>Tue, 02 Jan, 2024</span>
+                          </div>
+                          <div class="lifestyle">
+                            <h3>{{item.heading}}</h3>
+                            <p>
+                              {{item.description}}
+                            </p>
+                          </div>
+                          <div class="enroll">
+                            <div class="image_block">
+                              <img
+                                [src]="item.url"
+                                [alt]="item.heading"
+                              />
+                              <img
+                                [src]="item.url1"
+                                [alt]="item.heading"
+                                class="images"
+                              />
+                              <a href="#" class="images">+5</a>
+                            </div>
+                          </div>
+                        </div>
+                </div>
+            }
+        </div>
+    </div>
+    
+    <button (click)="prev()" class="btn prevbtn">
+        <span class="material-symbols-outlined">chevron_right</span>
+    </button>
+    <button (click)="next()" class="btn nextbtn">
+        <span class="material-symbols-outlined">chevron_right</span>
+    </button>
+</div>

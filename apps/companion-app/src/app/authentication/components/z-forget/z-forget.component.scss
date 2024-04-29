@@ -1,0 +1,28 @@
+@import "../../../../assets/styles/color-variables";
+@import "../../../../assets/styles/typography";
+
+// @import "../styles/typography";
+.forgot-btn{
+.mdc-button{
+    margin-top: 0px!important;
+}
+}
+
+
+
+
+
+.forgotPassword{
+    width: 100%;
+    strong{
+        font-weight: 700;
+        color: $z-lightgray;
+        font-size: $lg-text;
+    }
+    p{
+        margin: 0;
+        color: #cbe2d166;
+        font-size: $sx-text;
+        margin-bottom: 16px;
+    }
+}

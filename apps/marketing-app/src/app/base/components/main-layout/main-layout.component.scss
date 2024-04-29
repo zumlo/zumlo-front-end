@@ -1,0 +1,291 @@
+.custom-container {
+    width: 1150px;
+}
+
+.contactEnable {
+    .mdc-button {
+        background: #043a4e !important;
+        color: #cbe2d1 !important;
+        box-shadow: none;
+    }
+}
+
+// main banner section desktop animation
+@media (min-width: 993px) {
+    .image-animation {
+        img {
+            position: absolute;
+            top: 50%;
+            left: -310px;
+            transform: translate(0%, -50%) scale(0.28);
+            -webkit-transform: translate(0%, -50%) scale(0.28);
+            animation: imageanimate 6s;
+            -webkit-animation: imageanimate 6s;
+        }
+    }
+    @keyframes imageanimate {
+        0% {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1);
+            -webkit-transform: translate(-50%, -50%) scale(1);
+        }
+        50% {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.7);
+            -webkit-transform: translate(-50%, -50%) scale(0.7);
+        }
+        70% {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.7);
+            -webkit-transform: translate(-50%, -50%) scale(0.7);
+        }
+        100% {
+            position: absolute;
+            top: 50%;
+            left: -310px;
+            transform: translate(0%, -50%) scale(0.28);
+            -webkit-transform: translate(0%, -50%) scale(0.28);
+        }
+    }
+}
+
+.text-animation {
+    position: relative;
+    left: 0;
+    animation: textanimate 8s;
+    -webkit-animation: textanimate 8s;
+}
+
+@keyframes textanimate {
+    0% {
+        position: relative;
+        left: 120%;
+    }
+    50% {
+        position: relative;
+        left: 120%;
+    }
+    100% {
+        position: relative;
+        left: 0;
+    }
+}
+
+// banner mobile animation
+@media(max-width: 992px) {
+    .banner-Info-section {
+        flex-direction: column;
+    }
+    .image-animation {
+        img {
+            transform: scale(1);
+            -webkit-transform: scale(1);
+            animation: imageanimate 6s;
+            -webkit-animation: imageanimate 6s;
+        }
+    }
+    @keyframes imageanimate {
+        0% {
+            transform: scale(2);
+            -webkit-transform: scale(2);
+        }
+        100% {
+            transform: scale(1);
+            -webkit-transform: scale(1);
+        }
+    }
+}
+
+// banner image
+@media(min-width: 1536px) {
+    .image-animation {
+        img {
+            left: -210px;
+        }
+    }
+    @keyframes imageanimate {
+        0% {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        50% {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.7);
+        }
+        70% {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.7);
+        }
+        100% {
+            left: -210px;
+            transform: translate(0%, -50%) scale(0.28);
+        }
+    }
+}
+
+.image-animation {
+    img {
+        @media (max-width: 992px) {
+            max-width: 250px;
+            margin: auto;
+        }
+        @media (max-width: 575px) {
+            max-width: 180px;
+            margin: auto;
+        }
+    }
+}
+
+// banner below section
+#discover {
+    .contract-animate,
+    .contract-animate-1,
+    .contract-animate-2,
+    .contract-animate-3 {
+        opacity: 0.2;
+    }
+    &.z-active-section {
+        .contract-animate {
+            animation: fontcontrast 2s;
+            opacity: 1;
+        }
+        .contract-animate-1 {
+            animation: fontcontrast 5s;
+            opacity: 1;
+        }
+        .contract-animate-2 {
+            animation: fontcontrast 8s;
+            opacity: 1;
+        }
+        .contract-animate-3 {
+            animation: fontcontrast 11s;
+            opacity: 1;
+        }
+    }
+}
+
+@keyframes fontcontrast {
+    0% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.mobile-image {
+    display: none;
+}
+
+.discover-section {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    &.z-active-section-discover {
+        animation-name: animate-up;
+        -webkit-animation-name: animate-up;
+        animation-duration: 800ms;
+        -webkit-animation-duration: 800ms;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        opacity: 1;
+    }
+}
+
+.mobile-image {
+    display: block;
+}
+
+@-webkit-keyframes animate-up {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        -o-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+        transform: translateY(0px);
+        display: block;
+    }
+}
+
+// //gallery desktop
+@media(min-width: 768px) {
+    .z-active-section-gallery {
+        -webkit-animation: image-zoom-in 7s ease-out both;
+        animation: image-zoom-in 7s ease-out both;
+        animation-delay: 1s;
+    }
+}
+
+@keyframes image-zoom-in {
+    0% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+    100% {
+        transform: scale(5);
+        -webkit-transform: scale(5);
+    }
+}
+
+@media(max-width: 1199px) {
+    .z-active-section-gallery {
+        img {
+            height: 100%;
+        }
+    }
+}
+
+// gallery mobile view
+@media(max-width: 767px) {
+    @keyframes image-zoom-mobile {
+        0% {
+            transform: scale(1);
+            -webkit-transform: scale(1);
+        }
+        100% {
+            transform: scale(4.5);
+            -webkit-transform: scale(4.5);
+        }
+    }
+    .z-active-section-gallery {
+        -webkit-animation: image-zoom-mobile 4.5s ease-out both;
+        animation: image-zoom-mobile 4.5s ease-out both;
+        animation-delay: 0.5s;
+    }
+    .gallery-thumbnail {
+        display: inline-flex;
+        justify-content: center;
+        min-height: 200px;
+        img {
+            object-fit: cover;
+        }
+    }
+    // contact 
+    .infinite-logo {
+        display: none;
+    }
+}

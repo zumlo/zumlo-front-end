@@ -1,0 +1,384 @@
+@import '../styles/color-variables';
+@import '../styles/typography';
+@import '../styles/mixin';
+
+.authScreen {
+  width: 100%;
+  height: 100vh;
+  background-image: url('../images/login.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  padding: 2.5rem 0px;
+  display: flex;
+  align-items: center;
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $z-transparent;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(4px);
+  }
+  .authForm {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 5rem;
+    height: 80%;
+    @include for-desktop-down {
+      justify-content: center;
+      align-items: center;
+    }
+    @include for-phone-only {
+      padding: 0px 4rem;
+    }
+    @include for-smallphone-only {
+      padding: 0px 1rem;
+    }
+    @include for-tablet-portrait-up{
+      padding: 0px 2rem;
+    }
+    .authformInner {
+      max-width: 640px;
+      height: 100%;
+      width: 100%;
+      background-color: $z-byzantine-lite-2;
+      z-index: 1;
+      padding: 2.5rem;
+      border-top: 4px solid $z-orange-color;
+      border-radius: 0.75rem;
+      overflow-y: auto;
+      display: flex;
+      align-items: center;
+
+      @include for-smallphone-only{
+        height: 88%;
+      }
+      @include for-phone-only {
+        padding: 1rem;
+      }
+      
+      @include for-tablet-portrait-up{
+       padding: 1rem;
+      }
+      .logo {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 3.5rem;
+        @include for-laptop-view-down{
+          padding-bottom: 1.5rem;
+        }
+
+        @include for-tablet-portrait-up {
+          padding-bottom: 1.5rem;
+        }
+        @include for-phone-only {
+          padding-bottom: 1rem;
+        }
+        @include for-smallphone-only {
+          padding-bottom:0;
+        }
+        svg{
+          @include for-smallphone-only {
+            width: 100px;
+          } 
+        }
+        
+      }
+      // from css
+      .formOuter {
+        width: 83%;
+        margin: 0px auto;
+        @include for-phone-only {
+          width:90%;
+        }
+        @include for-smallphone-only {
+          width:100%;
+        }
+        .mdc-button {
+          width: 100%;
+          background-color: $z-teal;
+          border-radius: 0.5rem;
+          box-shadow: none;
+          height: 44px;
+          color: $z-lightgray;
+          text-transform: uppercase;
+          margin-top: 3rem;
+          &:hover {
+            background-color: $z-teal;
+          }
+          &:focus {
+            outline: none;
+          }
+          @include for-phone-only {
+            margin-top: 2rem;
+          }
+        }
+
+        //input css  
+        .commonInputField {
+          position: relative;
+          .mat-mdc-form-field {
+            width: 100%;
+            margin-bottom: 2rem;
+          }
+    
+          mat-form-field {
+            .mdc-notched-outline__leading {
+              width: 100%;
+              border: 1px solid $z-orange-color;
+              border-radius: 8px;
+            }
+            .mdc-notched-outline__notch,
+            .mdc-notched-outline__trailing {
+              border: none;
+            }
+            .mat-mdc-text-field-wrapper {
+              padding: 0px 10px;
+              &:hover {
+                outline: none;
+              }
+            }
+            &:hover {
+              .mdc-notched-outline__leading {
+                border-color: $z-orange-color !important;
+                box-shadow: 0px 0px 5px #ff9d4880;
+              }
+            }
+            &:focus {
+              .mdc-notched-outline__leading {
+                border-color: $z-orange-color !important;
+                box-shadow: 0px 0px 5px #ff9d4880;
+              }
+            }
+            .mat-mdc-form-field-infix {
+              width: 100%;
+              padding: 9px 0px;
+              min-height: auto;
+              display: inline-flex;
+              align-items: center;
+              input {
+                border-radius: 0.5rem;
+                margin-left: 10px;
+                color: $z-lightgray;
+                font-size: $sx-text;
+                &::placeholder {
+                  color: $z-lightgray;
+                  font-size: $sx-text;
+                  opacity: 0.6;
+                  font-weight: 400;
+                }
+              }
+              .mat-icon {
+                color: $z-orange-color;
+                font-size: $md-text;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+              }
+            }
+          }
+          .error-message {
+            position: absolute;
+            bottom: 10px;
+            color: $z-orange-color;
+            font-size: $small-text;
+          }
+        }
+
+        // login form
+        .loginForm {
+          width: 100%;
+          .ng-star-inserted {
+            .mat-mdc-checkbox {
+              .mdc-checkbox {
+                padding: 10px 10px;
+               
+              }
+              width: 70%;
+              display: inline-block;
+              label {
+                color: $z-lightgray;
+                font-size: $sx-text;
+                font-weight: 400;
+                padding-left: 0px;
+              }
+              @include for-smallphone-only {
+                width: 100%;
+              }
+            }
+          }
+          .forgotPassword {
+            width: 30%;
+            text-align: right;
+            display: inline-block;
+            font-weight: 600;
+            color: $z-teal;
+            text-decoration: none;
+            font-size: $sx-text;
+            @include for-phone-only{
+              font-size:  $small-text;
+            }
+            @include for-smallphone-only{
+              width: 100%;
+              text-align: left;
+              padding: 0px 10px;
+            }
+          }
+        }
+      }
+    }
+    
+  }
+  
+  .mdc-checkbox {
+    .mdc-checkbox__background {
+      background-color: transparent!important;
+      border-color: $z-teal !important;
+      border-radius: 0.25rem;
+
+    }
+  }
+  .mat-mdc-form-field-subscript-wrapper {
+    display: none;
+  }
+}
+// fogot password screen
+.forgot-btn {
+  .mdc-button {
+    margin-top: 0px !important;
+  }
+}
+.forgotPassword {
+  width: 100%;
+  strong {
+    font-weight: 700;
+    color: $z-lightgray;
+    font-size: $lg-text;
+    line-height: 1.75rem;
+  }
+  p {
+    margin: 0;
+    color: $z-lightgray;
+    font-size: $sx-text;
+    margin-bottom: 16px;
+    @include for-phone-only{
+      font-size: $small-text;
+    }
+  }
+}
+// .ng-otp-input-wrapper
+.ng-otp-input-wrapper {
+  margin-bottom: 30px;
+  input {
+    &.otp-input {
+      background-color: transparent;
+      border: 1px solid #ff9d48;
+      width: 48px;
+      height: 48px;
+      margin-right: 14px !important;
+      font-size: 0.875rem;
+      color: #cbe2d1;
+      &:focus-visible {
+        outline: none;
+      }
+      @include for-phone-only{
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
+// thanks screen
+.loginthanks{
+  width: 100%;
+  text-align: center;
+  .thanksIcon{
+    width: 64px;
+    height: 64px;
+    margin: 1.25rem auto;
+    img{
+      max-width: 100%;
+    }
+  }
+  p{
+    font-size: $sx-text;
+    line-height: 1.25rem; 
+    color:#cbe2d166;
+    
+    a{
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: $z-teal;
+      padding-left: 0.25rem;
+    }
+  }
+}
+.resendOtp{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  p{
+    margin-right: 10px;
+    color: $z-orange-color;
+    font-weight: 600;
+    font-size: $sx-text;
+  }
+  button{
+    background-color: transparent!important;
+    padding: 0!important;
+    &:hover{
+      background-color: transparent !important;
+      box-shadow: none !important;
+      --mdc-protected-button-container-color: transparent !important;
+      --mdc-protected-button-label-text-color: transparent !important;
+      --mat-protected-button-state-layer-color:transparent !important;
+      --mat-protected-button-ripple-color:transparent !important;
+  
+    }
+  }
+  .forgot-btn:hover{
+    background-color: unset !important;
+  }
+}
+
+.mdc-text-field--outlined,
+.mdc-text-field--invalid:not(.mdc-text-field--disabled){
+ .mdc-text-field__input {
+  caret-color: $z-teal!important;
+}
+}
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) {
+.mdc-text-field__input{
+  caret-color: $z-teal!important;
+}
+}
+
+.otpFeilds{
+  position: relative;
+.error-message {
+  position: absolute;
+  top: 105%;
+  color: $z-orange-color;
+  font-size: $small-text;
+}
+}
+.mdc-checkbox:hover {
+  .mdc-checkbox__ripple{
+    background-color: unset!important;
+}
+}
+
+.ngx-toastr {
+  min-width: fit-content !important;  // Specify toastr-dialog width for all devices
+  width: auto;
+}

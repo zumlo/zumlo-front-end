@@ -1,0 +1,50 @@
+<div class="dashboardData seekersDashboard">
+  <div class="rightCol">
+    <div class="plans_col col-6">
+      <div class="reminderCol">
+        <div class="head">
+          <strong>{{config.heading}}</strong>
+        </div>
+        <div class="statisticsDetails">
+          <div class="satics">
+            @for (stats of config.stats; track $index) {
+            <span class="numberOne number">
+{{stats}}
+</span>
+            }
+            <!-- <span class="numberOne number">
+              {{config.stats1}}
+            </span>
+            <span class="numberTwo number">{{config.stats2}}</span>
+            <span class="numberThree number">{{config.stats3}}</span>
+            <span class="numberFour number">{{config.stats4}}</span> -->
+          </div>
+          <div class="seekersStatus">
+            @for (type of config.statisticsType; track $index) {
+        <div class="seeekerStatusInner">
+          <span class="circle"></span>
+          <span>{{type}}</span>
+        </div>
+      }
+            <!-- <div class="seeekerStatusInner">
+              <span class="circle"></span>
+              <span>{{config.statisticsType1}}</span>
+            </div>
+            <div class="seeekerStatusInner">
+              <span class="circle"></span>
+              <span>{{config.statisticsType2}}</span>
+            </div>
+            <div class="seeekerStatusInner">
+              <span class="circle"></span>
+              <span>{{config.statisticsType3}}</span>
+            </div>
+            <div class="seeekerStatusInner">
+              <span class="circle"></span>
+              <span>{{config.statisticsType4}}</span>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

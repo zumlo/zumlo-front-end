@@ -1,0 +1,43 @@
+<header  [ngClass]="{ 'header-scroll-to-top': initialScrollPosition }">
+    <div class="xl:container m-auto pt-5 relative z-[99]">
+        <nav class="md:py-5 py-3 xl:px-5 lg:px-7 md:px-7 px-4 mx-4 sticky-element">
+            <div class="flex flex-wrap items-center justify-between mx-auto">
+                <a href="" class="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer max-w-[124px]">
+                    <img class="zumlo-logo lg:w-full md:w-[80px] w-[70px] lg:h-12 h-auto visible" src="assets/images/zumlo-logo.png">
+                </a>
+                <div (click)="toogleButton()" class="flex navbar-toggle-button">
+                    <button type="button" #navbarToggleButton class="relative inline-flex flex-col gap-[5px] items-center p-2 w-10 h-10 justify-center text-sm text-[#cae0d0] bg-[#665472]  rounded-lg xl:hidden focus:outline-none focus:ring-2 ring-2 ring-[#FF9D48] focus:ring-[#FF9D48]"
+                        aria-controls="navbar-default" aria-expanded="false">
+                    </button>
+                </div>
+
+                @if(toogleBtn){
+                <div class=" w-full xl:block xl:w-auto" id="navbar-default" [ngClass]="{'dynamic-class': toogleBtn}">
+                    <ul class="flex flex-col xl:flex-row rtl:space-x-reverse xl:gap-4 lg:gap-3 md:gap-3.5 sm:gap-1.5 gap-0">
+                        @for (key of headerkeys; track key; let i = $index) {
+                        <li *ngIf="scrollPositions" class="md:m-0" (click)="scrollToSection(key)" [ngClass]="(currentScroll >= scrollPositions[key] &&
+                             currentScroll <= scrollPositions[headerkeys[i+1]]-1) ? 'dynamicClassOnScrolling' : '' ">
+                            <a class="block py-2 px-3 xl:text-[#CBE2D1] text-[#043A4E]  text-xl cursor-pointer hover:font-medium xl:hover:text-[#cbe2d1]" aria-current="page">{{headerData[key]}}</a>
+                        </li>
+                        }
+                    </ul>
+                </div>
+                } @else{
+                <div class="hidden w-full xl:block xl:w-auto" id="navbar-default">
+                    <ul class="flex flex-col xl:flex-row rtl:space-x-reverse xl:gap-4 lg:gap-3 md:gap-3.5 sm:gap-1.5 gap-0">
+                        @for (key of headerkeys; track key; let i = $index) {
+                        <li *ngIf="scrollPositions" class="md:m-0" (click)="scrollToSection(key)" 
+                        [ngClass]="(currentScroll >= scrollPositions[key] && currentScroll <= scrollPositions[headerkeys[i+1]]-1) ? 'dynamicClassOnScrolling' : '' ">
+                            <a class="block py-2 px-3 xl:text-[#CBE2D1] text-[#043A4E]  text-base cursor-pointer hover:font-medium xl:hover:text-[#cbe2d1]" aria-current="page">{{headerData[key]}}</a>
+                        </li>
+                        }
+                    </ul>
+                </div>
+                }
+                <button (click)="scrollToSection('contactUs')" class="xl:block lg:hidden hidden border-[1px] border-[#FF9D48] text-[#CBE2D1] text-sm font-semibold py-2.5 px-4 rounded-[48px] uppercase hover:bg-[#4ea692] hover:border-[#4ea692] hover:text-[#CBE2D1]">contact
+                    us</button>
+            </div>
+        </nav>
+    </div>
+
+</header>

@@ -1,0 +1,4 @@
+<ng-container [formGroup]="group" *ngIf="config">
+    <mat-checkbox ngDefaultControl  type="checkbox" [formControl]="control"  id="{{ config.dataKey }}" color="primary"
+     (change)="showOptions($event)">{{ config.name }}</mat-checkbox>
+</ng-container>

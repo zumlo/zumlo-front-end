@@ -1,0 +1,75 @@
+{
+  "name": "companion-app",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "z",
+  "sourceRoot": "apps/companion-app/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:application",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/companion-app",
+        "index": "apps/companion-app/src/index.html",
+        "browser": "apps/companion-app/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/companion-app/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/companion-app/src/favicon.ico",
+          "apps/companion-app/src/assets"
+        ],
+        "styles": [
+          "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+          "apps/companion-app/src/styles.scss",
+          "node_modules/animate.css/animate.min.css"
+        ],
+        "scripts": [
+          "node_modules/apexcharts/dist/apexcharts.min.js"
+        ]
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "companion-app:build:production"
+        },
+        "development": {
+          "buildTarget": "companion-app:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "companion-app:build"
+      }
+    }
+  }
+}

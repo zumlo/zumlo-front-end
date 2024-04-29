@@ -1,0 +1,8 @@
+<ng-container [formGroup]="group" *ngIf="config">
+    <mat-label>{{config.name}}</mat-label>
+    <mat-radio-group aria-label="Select An Option" [formControl]="control">
+        @for (option of config?.options; track option.key) {
+        <mat-radio-button [value]="option.value" id="{{option.key }}">{{option.value}}</mat-radio-button>
+        }
+    </mat-radio-group>
+</ng-container>

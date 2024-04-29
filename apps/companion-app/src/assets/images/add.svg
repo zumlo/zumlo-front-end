@@ -1,0 +1,24 @@
+<svg width="185" height="198" viewBox="0 0 185 198" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_3815_11567" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="185" height="198">
+<rect x="0.574219" y="0.317383" width="184" height="197" rx="13" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_3815_11567)">
+<g opacity="0.6">
+<g style="mix-blend-mode:plus-lighter" opacity="0.1">
+<circle cx="143.603" cy="52.7128" r="120.137" fill="#4EA692"/>
+<circle cx="143.603" cy="52.7128" r="120.137" stroke="white"/>
+</g>
+<g style="mix-blend-mode:plus-lighter" opacity="0.1">
+<circle cx="143.603" cy="52.7123" r="94.5758" fill="#4EA692"/>
+<circle cx="143.603" cy="52.7123" r="94.5758" stroke="white"/>
+</g>
+<g style="mix-blend-mode:plus-lighter" opacity="0.1">
+<circle cx="143.603" cy="52.7131" r="66.5239" fill="#4EA692"/>
+<circle cx="143.603" cy="52.7131" r="66.5239" stroke="white"/>
+</g>
+<circle cx="138.332" cy="52.5349" r="15.3496" fill="#043A4E"/>
+<path d="M138.332 45.8728V59.2009" stroke="#CBE2D1" stroke-width="2" stroke-linecap="round"/>
+<path d="M144.996 52.5349L131.667 52.5349" stroke="#CBE2D1" stroke-width="2" stroke-linecap="round"/>
+</g>
+</g>
+</svg>

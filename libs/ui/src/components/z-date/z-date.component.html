@@ -1,0 +1,12 @@
+<ng-container [formGroup]="group" *ngIf="config">
+    <mat-form-field appearance="outline" class="w-full">
+        <mat-label>{{config.name}}</mat-label>
+        <input matInput [matDatepicker]="picker" [formControl]="control">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <div *ngIf="!control?.valid && (control?.touched || control?.dirty)"
+        class="error-message text-xs text-[#ff9d48] absolute  left-0 right-0 ">
+        {{ errorMessage }}
+    </div>
+</ng-container>

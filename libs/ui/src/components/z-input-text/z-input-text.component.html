@@ -1,0 +1,15 @@
+<ng-container [formGroup]="group" *ngIf="config">
+    <div class="relative z-control-{{config.key}} commonInputField">
+        <mat-form-field color="primary" appearance="outline" class="w-full">
+            <!-- <mat-label>{{ config.name }}</mat-label> -->
+            <mat-icon> {{config.icons}}</mat-icon>
+            <input matInput [placeholder]="config.placeholder" [type]="config.type" [formControl]="control" [readonly]="config?.readonly" [value]="config?.value" [maxlength]="validations.maxLength || 100" id="{{ config.dataKey }}" (focusout)="onInputBlur()" />
+        </mat-form-field>
+
+        <div *ngIf="!control?.valid && (control?.touched)"
+            class="error-message text-xs text-[#ff9d48] absolute  left-0 right-0 ">
+            {{ checkErrors() }}
+        </div>
+    </div>
+
+</ng-container>

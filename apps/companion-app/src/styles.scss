@@ -1,0 +1,84 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import 'assets/styles/authentication';
+@import 'assets/styles/_color-variables';
+@import 'assets/styles/_common';
+@import 'assets/styles/slider';
+@import 'assets/styles/_mixin';
+@import 'assets/styles/_typography';
+@import 'material-icons/iconfont/material-icons.css';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+@import 'ngx-toastr/toastr';
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+}
+a{cursor: pointer;}
+ul{list-style: none;}
+button{cursor: pointer;}
+.z-main-caption {
+    font-size: 1.875rem;
+}
+
+.z-sub-caption {
+    font-size: 1.5rem;
+}
+
+.z-lg-text {
+    font-size: 1.25rem;
+}
+
+.z-md-text {
+    font-size: 1.125rem;
+}
+
+.z-sm-text {
+    font-size: 1rem;
+}
+
+.z-sx-text {
+    font-size: 0.875rem;
+}
+
+.z-small-text {
+    font-size: 0.75rem;
+}
+.cs-container{
+    // max-width:1536px;
+    margin: 0px auto;
+    padding:0px 2.5rem;
+    width: 100%;
+}
+.main{
+    background-color: $z-byzantine-lite-2;
+    padding-top: 6.5rem;
+    padding-bottom: 2.5rem;
+}
+img{
+    max-width: 100%;
+}
+
+
+// common
+.sliderInner{
+    width: 100%;
+    .dateTime{
+        // width: 100%;
+        // display: flex;
+        // align-items: center;
+        // justify-content: space-between;
+    }
+}
+.col-6{
+    max-width: 50%;
+    width: 50%;
+}
+.toast-container .toast-info {
+    background-color: #043a4e;
+}

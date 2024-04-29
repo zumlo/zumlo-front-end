@@ -1,0 +1,12 @@
+<ng-container [formGroup]="group" *ngIf="config">
+    <div class="relative z-control-{{config.key}} number_feild">
+        <mat-form-field appearance="outline" class="w-full">
+            <mat-label class="label_feild">{{ config.name }}</mat-label>
+            <input matInput [type]="config.type" class="p-inputtext-sm w-full" [formControl]="control" id="{{ config.dataKey }}" mask="{{config.mask}}" (focusout)="onInputBlur()"/>
+        </mat-form-field>
+
+        <div *ngIf="!control?.valid && (control?.touched || control?.dirty)" class="error-message text-xs text-[#ff9d48] absolute  left-0 right-0 ">
+            {{ errorMessage }}
+        </div>
+    </div>
+</ng-container>

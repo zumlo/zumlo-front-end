@@ -1,0 +1,18 @@
+<div class="form">
+  <div class="forgotPassword">
+    <strong>OTP Verification?</strong>
+    <p>Enter the verification code we just sent on your email address.</p>
+  </div>
+<div class="otpFeilds">
+  <ng-otp-input #ngOtpInput (onInputChange)="onOtpChange($event)" [config]="configs" ></ng-otp-input>
+  <div *ngIf="otpRequired" class="error-message"> Please enter complete otp </div>
+</div>
+  <div class="resendOtp" >
+    @if (displayTime != '0:00'){
+    <p> {{ displayTime }} </p>
+    } @else {
+      <z-simple-button (buttonClick)="resendOtp()" class="forgot-btn">Resend</z-simple-button>
+    }
+  </div>
+  <z-simple-button (buttonClick)="verifyOtp()" class="forgot-btn">verify</z-simple-button>
+</div>

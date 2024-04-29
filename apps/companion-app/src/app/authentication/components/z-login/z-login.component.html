@@ -1,0 +1,10 @@
+<!-- Working on this -->
+<form [formGroup]="form">
+  <div class="loginForm">
+    @for (config of configs; track $index) {
+    <ng-container zDynamicField [group]="form" [config]="config" (valueChanged)="valueChanged($event)"></ng-container>
+    }
+    <a href="/auth/forgot-password" class="forgotPassword">Forgot Password!</a>
+  </div>
+  <z-simple-button (buttonClick)="loginUser()">Login</z-simple-button>
+</form>

@@ -1,0 +1,291 @@
+<!-- Banner Section -->
+<section zViewPortObserver="z-active-section" (inViewPort)="scrollClassShare('home')" id="home" class="relative w-full flex bg-gradient-to-b from-[#655471] to-[#8F74A0] md:h-[calc(100vh-102px)] h-auto" #home>
+    <img class="absolute left-0 bottom-0 z-1 cursor-pointer w-56 xl:opacity-100 lg:opacity-45 md:opacity-25 opacity-15" src="assets/images/butterfly.png">
+    <img class="absolute md:right-[65px] right-[15px] bottom-0 z-10 cursor-pointer w-12" src="assets/images/dropdown-icon.png" (click)="scrollDown('whyZumlo')">
+    <div class="xl:container m-auto">
+        <div class="relative banner-Info-section flex justify-center overflow-hidden items-center flex-wrap md:flex-nowrap xl:h-[744px] xl:py-32 lg:py-28 md:py-28 sm:py-28 py-36 xl:gap-20 lg:gap-9 md:gap-8 gap-2 xl:px-5 lg:px-7 md:px-7 px-4">
+            <div class="image-animation image md:max-w-[350px] max-w-full md:min-w-[350px] min-w-full">
+                <img class="zumlo-logo" src="assets/images/zumlo-logo.png">
+            </div>
+            <div class="w-full text-animation md:max-w-[860px]">
+                <h1 class="xl:border-s-2 xl:border-[#CBE2D1] border-0 xl:text-[42px] text-center text-[#CBE2D1] xl:leading-[54px] font-semibold xl:ps-[38px] md:py-10 py-4 lg:text-3xl sm:text-2xl text-2xl">
+                    Shaping the Future of Mental Health Inclusive, Accessible, Transformative</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- -->
+
+<!-- Empowering Minds Section -->
+<section #discover zViewPortObserver="z-active-section" (inViewPort)="scrollClassShare('discover')" class="w-full bg-gradient-to-b from-[#8F74A0] to-[#655471]" id="discover">
+    <div class="xl:container m-auto">
+        <div class="flex xl:py-32 lg:py-28 md:py-20 sm:py-12 py-12 xl:px-5 lg:px-7 md:px-7 px-6 justify-between items-center flex-wrap">
+            <div class="lg:w-3/6 w-full lg:border-r-2 lg:border-[#FF9D48] border-0">
+                <h2 class="uppercase font-bold xl:text-7xl lg:text-6xl md:text-5xl sm:text-5xl text-4xl xl:leading-[68px] sm:leading-[52px] leading-[43px] tracking-wide">
+                    <span class="contract-animate block text-[#FF9D48]">empowering</span>
+                    <span class="contract-animate-1 block text-[#FF9D48]">minds</span>
+                    <span class="contract-animate-2 block text-[#CBE2D1] pt-2">enriching</span>
+                    <span class="contract-animate-3  block text-[#CBE2D1]">lives</span>
+                </h2>
+            </div>
+            <!-- content -->
+            <div class="lg:w-3/6 w-full">
+                <p class="xl:text-[22px] lg:text-xl md:text-lg sm:text-base text-sm text-[#CBE2D1] sm:leading-[33px] leading-6 lg:ps-10 xl:py-0 lg:py-10 sm:py-8 py-7 pb-0">
+                    A world where everyone, irrespective of their location or socio economic status, has access to quality mental health care. By uniting the power of AI and expert knowledge we aim to democratize mental health care, making it accessible, proactive, and personalized.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--- -->
+
+<!-- Chatbox section -->
+<section zViewPortObserver="z-active-section" (inViewPort)="autoTextContent('whyZumlo')" class="relative w-full bg-[#CBE2D1] h-auto py-20" #whyZumlo id="whyZumlo">
+    <img class="absolute right-0 top-0 z-1 w-96 xl:opacity-100 lg:opacity-45 md:opacity-25 opacity-25" src="assets/images/multicircles.png">
+    <img class="absolute left-0 bottom-0 z-1 max-w-48 xl:opacity-100 lg:opacity-45 md:opacity-25 opacity-15 xl:block md:block sm:hidden hidden" src="assets/images/why-zumlo.png">
+    <img class="absolute right-0 bottom-0 z-1 md:max-w-[445px] sm:max-w-[400px] max-w-[385px] xl:opacity-100 lg:opacity-45 md:opacity-25 opacity-15" src="assets/images/objects.png">
+    <div class="xl:container m-auto">
+        <div class="md:max-w-[900px] sm:max-w-[600px] max-w-[90%] m-auto">
+            <div class="border-[3px] border-[#043A4E] rounded-[20px] xl:p-10 md:p-8 sm:p-4 p-2 overflow-hidden h-full min-h-[954px]">
+                <div class="flex xl:gap-5 sm:gap-4 gap-3 items-center justify-end animate__animated animate__fadeInUpBig transition duration-[5000]">
+                    <div class="chatbox xl:py-6 lg:py-5 md:py-4 sm:py-3 py-3 px-4 bg-[#4EA692] rounded-[20px]">
+                        <h3 class="font-bold xl:text-5xl sm:text-4xl text-2xl text-[#CBE2D1]">Why Zumlo?</h3>
+                    </div>
+                    <img class="xl:w-[53px] lg:w-[53px] md:w-[50px] sm:w-[50px] w-[35px]" src="assets/images/svg/chatbox.svg" alt="">
+                </div>
+                <div class="flex xl:gap-8 md:gap-7 sm:gap-5 gap-3 xl:mt-11 md:mt-8 sm:mt-6 mt-6 items-start animate__animated animate__slideInUp animate__delay-1s transition duration-1000">
+                    <img class="xl:w-[53px] lg:w-[53px] md:w-[50px] sm:w-[50px] w-[35px]" src="assets/images/svg/chat.svg" alt="">
+                    <div class="xl:py-9 md:py-7 sm:py-7 py-6 xl:px-9 md:px-7 sm:px-6 px-4 bg-[#6D597A] rounded-[20px] max-w-[530px]">
+                        <h3 class="font-semibold xl:text-[20px] md:text-lg sm:text-base text-base leading-[23px] text-[#FF9D48]">
+                            {{primaryValues?.heading}}</h3>
+                        <p class="xl:pt-5 md:pt-4 sm:pt-3 pt-2 text-[#CBE2D1] xl:text-lg sm:text-base text-sm">
+                            {{displayedTextPrimary}}</p>
+                    </div>
+                </div>
+                <div class="flex xl:gap-8 md:gap-7 sm:gap-5 gap-3 xl:mt-10 sm:mt-8 mt-8 items-start animate__animated animate__slideInUp  transition duration-2000" [ngClass]="{'hidden': !showOtherContent}">
+                    <img class="xl:w-[53px] lg:w-[53px] md:w-[50px] sm:w-[50px] w-[35px]" src="assets/images/svg/chat.svg" alt="">
+                    <div class="xl:py-9 xl:ps-9 xl:pr-4 sm:py-7 py-6 xl:px-9 md:px-7 sm:px-6 px-4 bg-[#6D597A] rounded-[36px] max-w-[530px]">
+                        <h3 class="font-semibold xl:text-[20px] md:text-lg sm:text-base text-base leading-[23px] text-[#FF9D48]">
+                            {{secondaryValues?.heading}}</h3>
+                        <p class="xl:pt-5 md:pt-4 sm:pt-3 pt-2 text-[#CBE2D1] xl:text-lg sm:text-base text-sm">
+                            {{displayedTextSecondary}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- -->
+
+<!-- Gallery Section -->
+<section zViewPortObserver="z-active-section" #gallery [threshold]="0" (inViewPort)="addAnimationToGallery(true, 'gallery')" class="w-full relative overflow-hidden h-screen" id="gallery">
+    <div class="bg-[#043A4E] overflow-hidden" [ngClass]="{'z-active-section-gallery': activeElementGallery}" #section>
+        <div class="container grid xl:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 grid-cols-3 md:gap-5 gap-2 m-auto h-screen  p-7" [ngClass]="{'z-active-image-gallery': activeElementGallery}">
+            <span class="rounded-[5px] md:rounded-[20px] gallery-thumbnail overflow-hidden"><img class="md:w-screen" src="assets/images/image-1.jpg" alt=""></span>
+            <span class="rounded-[5px] md:rounded-[20px] gallery-thumbnail overflow-hidden"><img class="md:w-screen" src="assets/images/image-2.jpg" alt=""></span>
+            <span class="rounded-[5px] md:rounded-[20px] gallery-thumbnail overflow-hidden"><img class="md:w-screen" src="assets/images/image-3.jpg" alt=""></span>
+            <span class="rounded-[5px] md:rounded-[20px] gallery-thumbnail overflow-hidden"><img class="md:w-screen" src="assets/images/image-4.jpg" alt=""></span>
+            <span class="rounded-[5px] md:rounded-[20px] gallery-thumbnail image-zoom overflow-hidden"><img class="md:w-screen" src="assets/images/image-5.jpg" alt=""></span>
+            <span class="rounded-[5px] md:rounded-[20px] gallery-thumbnail overflow-hidden"><img class="md:w-screen" src="assets/images/image-6.jpg" alt=""></span>
+            <span class="rounded-[5px] md:rounded-[20px] gallery-thumbnail overflow-hidden"><img class="md:w-screen" src="assets/images/image-7.jpg" alt=""></span>
+            <span class="rounded-[5px] md:rounded-[20px] gallery-thumbnail overflow-hidden"><img class="md:w-screen" src="assets/images/image-8.jpg" alt=""></span>
+            <span class="rounded-[5px] md:rounded-[20px] gallery-thumbnail overflow-hidden"><img class="md:w-screen" src="../../../../assets/images/image-9.jpg" alt=""></span>
+        </div>
+    </div>
+    <div class="w-full bg-[#CBE2D1] discover-section md:py-20 pt-0" [ngClass]="{'z-active-section-discover': mandateClassForDiscover}">
+        <div class="inner-discover flex h-full">
+            <img class="absolute left-0 top-0 z-50 w-96" src="assets/images/discover-zumlo.png">
+            <img class="absolute right-0 bottom-0 z-1 w-full max-w-[190px] md:max-w-[300px]" src="assets/images/foot-animation.gif">
+            <div class="xl:container m-auto">
+                <div class="flex items-center justify-center flex-col lg:h-full md:-h-full h-[600px] xl:px-5 lg:px-7 md:px-7 px-6">
+                    <h3 class="font-bold text-center lg:text-8xl sm:text-5xl text-3xl text-[#c6dacc]">Discover Zumlo</h3>
+                    <h2 class="font-bold lg:text-[120px] sm:text-6xl text-4xl xl:leading-[100px] lg:leading-[80px] md:leading-[70px] sm:leading-[60px] leading-[60px] text-[#6D597A] text-center">Discover Zumlo</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!---->
+
+<!-- Image Boxes Section -->
+<section id="boxes" class="relative w-full bg-[#043A4E] sm:pt-36 pt-24 md:pb-44 sm:pb-10 pb-10" zViewPortObserver="z-active-section" (inViewPort)="scrollClassShare('boxes')" #boxes>
+    <img class="absolute left-0 top-0 z-1 w-52" src="assets/images/svg/Vector.svg">
+    <img class="absolute right-0 top-0 z-1 w-52" src="assets/images/svg/Vector-right.svg">
+    <div class="xl:container m-auto xl:px-5 lg:px-7 md:px-7 px-6">
+        <div class="grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
+            <div class="md:pt-16 sm:pt-8 pt-8 md:pb-[30px] sm:pb-8 pb-8 md:px-[30px] sm:px-4 px-4 border-2 border-[#FF9D48] rounded-2xl">
+                <div class="flex flex-col md:gap-12 sm:gap-6 gap-4">
+                    <img class="w-10 h-14" src="assets/images/svg/Frame-1.svg" alt="">
+                    <div class="">
+                        <h2 class="xl:font-bold md:font-bold sm:font-medium font-medium md:text-2xl sm:text-xl text-lg text-[#FF9D48] pb-2">
+                            Breaking Barriers</h2>
+                        <p class="text-[#CBE2D1] sm:text-base text-sm xl:leading-1 md:leading-7 leading-6">Zumlo strives to remove barriers in mental health care, ensuring everyone has access to the help they need when they need it.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="md:pt-16 sm:pt-8 pt-8 md:pb-[30px] sm:pb-8 pb-8 md:px-[30px] sm:px-4 px-4 border-2 border-[#FF9D48] rounded-2xl">
+                <div class="flex flex-col md:gap-12 sm:gap-6 gap-4">
+                    <img class="w-10 h-14" src="assets/images/svg/Frame-2.svg" alt="">
+                    <div class="">
+                        <h2 class="xl:font-bold md:font-bold sm:font-medium font-medium md:text-2xl sm:text-xl text-lg text-[#FF9D48] pb-2">
+                            Enhancing Therapy</h2>
+                        <p class="text-[#CBE2D1] sm:text-base text-sm xl:leading-1 md:leading-7 leading-6">Zumlo acts as a powerful tool that complements traditional therapy methods. It bridges the gap between therapy sessions, helping users to put learned coping strategies into practice in real-life situations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="md:pt-16 sm:pt-8 pt-8 md:pb-[30px] sm:pb-8 pb-8 md:px-[30px] sm:px-4 px-4 border-2 border-[#FF9D48] rounded-2xl">
+                <div class="flex flex-col md:gap-12 sm:gap-6 gap-4">
+                    <img class="w-10 h-14" src="assets/images/svg/Frame-3.svg" alt="">
+                    <div class="">
+                        <h2 class="xl:font-bold md:font-bold sm:font-medium font-medium md:text-2xl sm:text-xl text-lg text-[#FF9D48] pb-2">
+                            Mitigating Stigma</h2>
+                        <p class="text-[#CBE2D1] sm:text-base text-sm xl:leading-1 md:leading-7 leading-6">By providing a private, safe space for individuals to express their thoughts and feelings, Zumlo can help to reduce the stigma associated with seeking help for mental health issues.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:pt-16 sm:pt-8 pt-8 md:pb-[30px] sm:pb-8 pb-8 md:px-[30px] sm:px-4 px-4 border-2 border-[#FF9D48] rounded-2xl">
+                <div class="flex flex-col md:gap-12 sm:gap-6 gap-4">
+                    <img class="w-10 h-14" src="assets/images/svg/Frame-4.svg" alt="">
+                    <div class="">
+                        <h2 class="xl:font-bold md:font-bold sm:font-medium font-medium md:text-2xl sm:text-xl text-lg text-[#FF9D48] pb-2">
+                            Accessible Care</h2>
+                        <p class="text-[#CBE2D1] sm:text-base text-sm xl:leading-1 md:leading-7 leading-6">Mental healthcare shouldn't be a privilege but a right. Zumlo provides immediate, 24/7 mental health support, ensuring care is accessible anytime, anywhere.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="md:pt-16 sm:pt-8 pt-8 md:pb-[30px] sm:pb-8 pb-8 md:px-[30px] sm:px-4 px-4 border-2 border-[#FF9D48] rounded-2xl">
+                <div class="flex flex-col md:gap-12 sm:gap-6 gap-4">
+                    <img class="w-10 h-14" src="assets/images/svg/Frame-5.svg" alt="">
+                    <div class="">
+                        <h2 class="xl:font-bold md:font-bold sm:font-medium font-medium md:text-2xl sm:text-xl text-lg text-[#FF9D48] pb-2">
+                            Continuity of Care</h2>
+                        <p class="text-[#CBE2D1] sm:text-base text-sm xl:leading-1 md:leading-7 leading-6">With Zumlo, individuals have a constant companion that offers mental health support in between therapy sessions or clinical visits.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="md:pt-16 sm:pt-8 pt-8 md:pb-[30px] sm:pb-8 pb-8 md:px-[30px] sm:px-4 px-4 border-2 border-[#FF9D48] rounded-2xl">
+                <div class="flex flex-col md:gap-12 sm:gap-6 gap-4">
+                    <img class="w-10 h-14" src="assets/images/svg/Frame-6.svg" alt="">
+
+                    <div class="">
+                        <h2 class="xl:font-bold md:font-bold sm:font-medium font-medium md:text-2xl sm:text-xl text-lg text-[#FF9D48] pb-2">
+                            Empowering Individuals</h2>
+                        <p class="text-[#CBE2D1] sm:text-base text-sm xl:leading-1 md:leading-7 sm:leading-6 leading-6">Zumlo equips individuals facing mental health challenges with tools, strategies, and companionship to reclaim their lives and grow stronger.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- -->
+
+<!-- Green bar -->
+<section #greenBar id="greenBar" zViewPortObserver="z-active-section" [threshold]="0" [disable]="isDisabled" class="relative w-full bg-gradient-to-b bg-[#043A4E] md:pb-0 pb-20 md:from-[#655471] md:to-[#8F74A0]">
+    <div class="xl:mx-0 mx-7 relative md:absolute left-0 right-0">
+        <div class="max-w-[1122px] bg-[#4EA692] relative md:-translate-y-1/2 border-[1px] border-[#CBE2D1] md:rounded-full rounded-xl overflow-hidden mx-auto xl:px-5 px-4 z-10">
+            <img class="absolute md:left-6 bottom-3 left-3/4 xl:block" src="assets/images/svg/contact-right.svg">
+            <img class="absolute right-[0px] top-1/2 -translate-y-1/2 w-full max-w-[420px] lg:block md:hidden hidden" src="assets/images/svg/join-us.svg">
+            <div class="xl:container m-auto lg:py-9 md:py-7 sm:py-6 py-5">
+                <div class="flex relative z-10 justify-between lg:items-center items-start lg:flex-row flex-col lg:gap-16 md:gap-5 gap-4 xl:px-[110px] lg:px[90px] md:px-[40px] sm:px-[4px] px-38px">
+                    <div class="">
+                        <h2 class="text-[#CBE2D1] font-bold sm:text-2xl text-xl pb-2.5">Join us in shaping the future of mental health care</h2>
+                        <p class="text-[#CBE2D1] sm:text-base text-sm">Learn about opportunities for collaboration, research, and direct impact in the development of Zumlo. Together, let’s create a tool that sets new standards in mental health care.</p>
+                    </div>
+                    <button class="uppercase text-[#043A4E] font-semibold sm:text-lg xs:text-base sm:py-4  py-2 px-5 bg-[#CBE2D1] rounded-full whitespace-nowrap" (click)="scrollDown('contactUs')">Contact
+                        us</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- -->
+
+<!-- Health Section -->
+<section #healthcareProfessionals id="healthcareProfessionals" zViewPortObserver="z-active-section" (inViewPort)="scrollClassShare('healthcareProfessionals')" class="sticky top-0 z-[5] w-full bg-gradient-to-b from-[#655471] to-[#8F74A0] overflow-hidden md:h-auto  h-[790px]">
+    <img class="absolute left-12 bottom-5 w-52" src="assets/images/svg/brain.svg">
+
+    <div class="xl:container m-auto md:block flex md:h-auto h-screen">
+        <div class="text-center m-auto xl:mt-0 xl:px-5 lg:px-7 md:px-7 px-6 lg:h-[100vh] lg:py-52 md:py-48 py-20 h-auto flex flex-col justify-center">
+            <h2 class="font-bold xl:text-[66px] lg:text-6xl md:text-5xl sm:text-4xl text-2xl xl:leading-[60px] md:leading-9 leading-9 text-[#4EA692]">
+                Healthcare Professionals</h2>
+            <h5 class="xl:text-3xl sm:text-2xl text-base text-[#FF9D48]">A Seamless Extension of your Clinical Expertise
+            </h5>
+            <p class="xl:mt-20 sm:mt-10 mt-4 xl:text-[22px] lg:text-lg sm:text-base sm:text-justify text-sm xl:leading-[33px] sm:leading-8 leading-5 text-[#CBE2D1] xl:pb-11 sm:pb-5 pb-4 lg:text-center md:text-start text-start">
+                Zumlo offers healthcare professionals a ground-breaking approach to enhance therapeutic outcomes. Our platform is designed to augment your practice, offering real-time patient monitoring, bespoke management tools, a suite of resources to augment therapy
+                sessions.  Gain deeper insights into patient health and behavior patterns, enhance patient engagement, use data-driven approaches to treatment, track progress, and provide personalized care.</p>
+
+            <p class="text-[#CBE2D1] xl:text-[20px] md:text-lg sm:text-base sm:text-justify text-sm xl:leading-9 sm:leading-8 leading-5 md:pb-11 sm:pb-5 pb-5 lg:text-center md:text-start text-start">
+                Enhance your practice with technology that understands and adapts to the needs of each patient.</p>
+        </div>
+    </div>
+</section>
+<!--  -->
+
+<!-- Individuals -->
+<section #individuals id="individuals" zViewPortObserver="z-active-section" (inViewPort)="scrollClassShare('individuals')" class="relative z-[6] w-full bg-gradient-to-b from-[#655471] to-[#8F74A0] overflow-hidden md:h-auto  h-[790px]">
+    <div [class.highlight]="isHighlighted" class=" h-screen w-full healthcare-profession  items-center justify-center bg-gradient-to-b from-[#655471] to-[#8F74A0]">
+        <img class="absolute left-12 bottom-5 w-52" src="assets/images/svg/brain.svg">
+        <div class="xl:container m-auto md:h-auto h-full flex relative  md:top-auto">
+            <div class="text-center m-auto xl:mt-0 xl:px-5 lg:px-7 md:px-7 px-6  md:py-52 py-20 h-auto flex flex-col justify-center">
+                <h2 class="font-bold xl:text-[66px] lg:text-6xl md:text-5xl sm:text-4xl text-2xl xl:leading-[60px] md:leading-9 leading-9 text-[#4EA692]">
+                    Individuals</h2>
+                <h5 class="xl:text-3xl sm:text-2xl text-base text-[#FF9D48]">Intelligent Care, Tailored for You</h5>
+                <p class="xl:mt-20 sm:mt-10 mt-8 xl:text-[22px] md:text-lg sm:text-base text-sm sm:text-justify xl:leading-[33px] sm:leading-8 leading-5 text-[#CBE2D1] xl:pb-11 sm:pb-5 pb-4 lg:text-center md:text-start text-start">
+                    Imagine a world where mental wellness support is as accessible as the smartphone in your pocket. That's Zumlo - your personal guide to mental well-being, available 24/7, ensuring no one ever feels alone in their mental health journey.</p>
+                <p class="xl:text-[22px] md:text-lg sm:text-base text-sm xl:leading-[33px] sm:text-justify sm:leading-8 leading-5 text-[#CBE2D1] xl:pb-11 sm:pb-5 pb-4 lg:text-center md:text-start text-start">
+                    Drawing from a diverse spectrum of disciplines including psychology, neuroscience, cultural studies, and holistic therapies, Zumlo offers a deeply personalized care experience. By understanding and integrating various cultural nuances and individual differences,
+                    Zumlo crafts a uniquely tailored path to mental wellness for each user, ensuring every aspect of your well-being is nurtured.</p>
+                <p class="xl:text-[22px] ms:text-lg sm:text-base text-sm xl:leading-[33px] sm:text-justify  sm:leading-8 leading-5 text-[#CBE2D1] lg:text-center md:text-start text-start">
+                    Designed to be accessible and engaging, Zumlo provides the tools and resources you need to navigate life's ups and downs. From stress management to personal growth, Zumlo is your partner in mental wellness.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- -->
+
+<!-- Your Voice Matter Section -->
+<section zViewPortObserver="z-active-section" (inViewPort)="scrollClassShare('joinOurJourne')" id="joinOurJourne" class="relative z-[10]  w-full flex bg-[#043A4E] xl:h-[100vh] h-auto xl:pt-28 sm:pt-20 pt-16 xl:pb-32 md:pb-24 sm:pb-16 pb-16 xl:px-5 lg:px-7 md:px-7 px-6">
+    <div class="xl:container m-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2  xl:gap-0 md:gap-8 sm:gap-8 gap-10">
+            <div class="border-[1px] border-[#4EA692] rounded-2xl md:py-12 sm:py-8 py-6 md:px-6 sm:px-4 px-3 bg-gradient-to-b from-[#01394D] to-[#1F5F77] h-auto">
+                <p class="text-[#CBE2D1] xl:text-[20px] md:text-lg sm:text-base text-sm xl:leading-9 sm:leading-8 leading-8 md:pb-11 sm:pb-5 pb-4">
+                    At the heart of Zumlo lies our community - individuals committed to nurturing their mental health and professionals dedicated to providing the best care. Whether you're a healthcare professional or someone seeking support, join our community.</p>
+                <p class="text-[#CBE2D1] xl:text-[20px] md:text-lg sm:text-base text-sm xl:leading-9 sm:leading-8 leading-8 md:pb-11 sm:pb-5 pb-4">
+                    Sign up to stay informed about our progress, share your thoughts, or express your interest in joining our beta testing phase. Your insights are invaluable in helping us refine a tool that's built for and inspired by you.</p>
+                <div class="w-[156px]">
+                </div>
+            </div>
+            <div class="flex justify-center items-center min-h-[450px] bg-[url('/assets/images/group.png')] bg-auto bg-no-repeat bg-center bg-contain">
+                <h2 class="uppercase text-[#4EA692] xl:text-5xl md:text-4xl sm:text-3xl text-2xl font-bold text-center xl:leading-[60px] sm:leading-[40px] leading-[30px]">
+                    your <br> voice <br> matters</h2>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- -->
+
+<!-- Connect With Us -->
+<section id="contactUs" zViewPortObserver="z-active-section" (inViewPort)="scrollClassShare('contactUs')" class="relative z-[10] w-full bg-[#6D597A] xl:pt-[140px] md:pt-44 sm:pt-16 pt-16 h-auto" #section>
+    <div class="xl:container m-auto">
+        <div class="flex xl:justify-between lg:justify-center pb-16 flex-col md:flex-row xl:gap-9 md:gap-4 gap-4 md:bg-[url('/assets/images/connectus.png')] bg-no-repeat xl:px-20 lg:px-16 md:px-10 px-5 bg-[length:100%_100%]">
+            <div class="relative flex justify-center flex-col xl:w-[545px] w-full xl:pb-0 md:bg-transparent bg-[#CBE2D1] md:rounded-0 md:pd-0 rounded-3xl sm:p-8 p-5">
+                <img class="xl:block :max-w-80 max-w-48 infinite-logo" src="assets/images/svg/infinity.svg">
+                <h3 class="capitalize font-bold xl:text-5xl md:text-4xl sm:text-4xl text-2xl text-[#4EA692] pb-1.5 pt-3.5">
+                    Connect With Us</h3>
+                <p class="text-[#043A4E] xl:text-lg sm:text-base text-sm">Seamless connections await in our contact section. Reach out effortlessly; we're eager to hear from you!</p>
+            </div>
+
+            <div class="flex flex-col xl:w-[545px] w-full xl:py-12 md:py-10 sm:py-8 py-6 xl:px-10 md:px-8 sm:px-6 px-5 bg-[#4EA692] border-[#B9B9B9] rounded-[20px]">
+                <form [formGroup]="form" [ngClass]="'z-contact-us grid grid-cols-2 gap-8'">
+                    @for (config of configs; track $index) {
+                    <ng-container zDynamicField [group]="form" [config]="config" [markAsDirty]="markControlsAsDirty" (valueChanged)="valueChanged($event)"></ng-container>
+                    }
+                    <z-simple-button (buttonClick)="onButtonClick($event)" [ngClass]="{'contactEnable' : !form.invalid}" [config]="{class: 'rounded-full sm:py-4 py-2 px-5 h-max text-[#043A4E] uppercase font-semibold bg-[#CBE2D1] white-nowrap', disabled: !form!.valid }">Contact Us
+                    </z-simple-button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

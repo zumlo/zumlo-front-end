@@ -1,0 +1,38 @@
+
+$xlg-text :  2.25rem;
+$main-caption: 1.875rem; // 30px
+$sub-caption: 1.5rem; // 24px
+$sub-text: 1.75rem; // 20px
+
+$lg-text: 1.25rem; // 20px
+$md-text: 1.125rem; // 18px
+$sm-text: 1rem; // 16px
+$sx-text: 0.875rem; // 14px
+$small-text: 0.75rem; // 12px
+.z-main-caption {
+    font-size: $main-caption;
+}
+
+.z-sub-caption {
+    font-size: $sub-caption;
+}
+
+.z-lg-text {
+    font-size: $lg-text;
+}
+
+.z-md-text {
+    font-size: $md-text;
+}
+
+.z-sm-text {
+    font-size: $sm-text;
+}
+
+.z-sx-text {
+    font-size: $sx-text;
+}
+
+.z-small-text {
+    font-size: $small-text;
+}

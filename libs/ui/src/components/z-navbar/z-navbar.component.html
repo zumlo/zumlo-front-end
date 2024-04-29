@@ -1,0 +1,12 @@
+<ng-container *ngTemplateOutlet="buttonTemplate;"></ng-container>
+
+<div class="xl:block hidden xl:static absolute right-0 top-20" id="navbar-default">
+    <mat-toolbar>
+        <ul
+            class="flex flex-col xl:flex-row rtl:space-x-reverse bg-[#CBE2D1] md:py-5 sm:py-4 py-4 md:px-10 xl:mt-0 lg:mt-4 mt-4 md:px-10 md:px-6 sm:px-5 px-5 rounded-[27px] xl:gap-[26px] lg:gap-6 md:gap-3.5 sm:gap-1.5 gap-0">
+            @for (menuItem of menuItems; track menuItem) {
+            <ng-container *ngTemplateOutlet="menuTemplate; context: { $implicit: menuItem }"></ng-container>
+            }
+        </ul>
+    </mat-toolbar>
+</div>

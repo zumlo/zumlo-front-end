@@ -1,0 +1,14 @@
+<div class="form forgotForm">
+  <div class="forgotPassword">
+    <strong>Create New Password?</strong>
+    <p>Your new password must be unique from those previously used.</p>
+  </div>
+  <form [formGroup]="form">
+    <div class="loginForm">
+      @for (config of configs; track $index) {
+      <ng-container zDynamicField [group]="form" [config]="config"></ng-container>
+      }
+    </div>
+  </form>
+  <z-simple-button (buttonClick)="resetPassword()" class="forgot-btn">Reset password</z-simple-button>
+</div>
