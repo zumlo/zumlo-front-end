@@ -1,0 +1,40 @@
+name: Deploy to Azure Static Web Apps
+
+on:
+  push:
+    branches:
+      - main  # or your default branch
+  pull_request:
+    branches:
+      - main  # or your default branch
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest  # or another image if you prefer
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18.13.0'  # Set this to the version you need
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build Angular application using Nx CLI
+      run: npx nx build companion-app --prod
+
+    - name: Deploy to Azure Static Web Apps
+      uses: Azure/static-web-apps-deploy@v1
+      with:
+        azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+        repo_token: ${{ secrets.GITHUB_TOKEN }} # Provided by GitHub
+        action: "upload"
+        ######
+        # Replace below with your specific paths
+        ######
+        app_location: "/dist/apps/companion-app/browser" # where your built files are output to
+        api_location: "" # set this if you have an API; leave blank otherwise
+        output_location: "" # set if your build outputs to a folder other than 'dist'
