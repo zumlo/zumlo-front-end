@@ -23,12 +23,13 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatRadioModule } from '@angular/material/radio';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import {MatCardModule} from '@angular/material/card';
+import {MatTabsModule} from '@angular/material/tabs';
 
 const material = [
   MatFormFieldModule, MatSelectModule, MatInputModule, MatTableModule, MatIconModule, MatSnackBarModule,
   MatDatepickerModule, MatNativeDateModule, MatButtonModule, MatDialogModule, MatSlideToggleModule,
   MatPaginatorModule, MatSortModule, MatMenuModule, MatToolbarModule, MatProgressSpinnerModule,
-  MatCheckboxModule, MatTooltipModule, MatRadioModule, CarouselModule, MatCardModule];
+  MatCheckboxModule, MatTooltipModule, MatRadioModule, CarouselModule, MatCardModule,MatTabsModule];
 
 @NgModule({
   declarations: [],

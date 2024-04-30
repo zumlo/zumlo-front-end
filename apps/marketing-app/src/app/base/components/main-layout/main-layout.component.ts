@@ -132,7 +132,7 @@ export class MainLayoutComponent implements OnChanges, AfterViewInit, OnInit {
             this.showOtherContent = true;
           }, 500);
           clearInterval(interval);
-          resolve(true);
+          resolve(false);
         }
       }, 400);
     })

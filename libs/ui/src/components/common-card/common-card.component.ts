@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ButtonConfig } from '../../models/widegetEmit';
 
 @Component({
   selector: 'z-common-card',
@@ -11,4 +12,18 @@ import { CommonModule } from '@angular/common';
 export class CommonCardComponent {
   @Input() config!: any;
   @Output() changed = new EventEmitter();
+  @Output() emitButton = new EventEmitter();
+  buttonsConfig!: ButtonConfig
+
+  onButtonClick() {
+    this.emitButton.emit(this.buttonsConfig)
+  }
+
+  ngAfterViewInit() {
+    this.buttonsConfig = {
+      action: 'click',
+      widgetKey: this.config?.type,
+      widgetButton: this.config.buttons[0].icon
+    }
+  }
 }

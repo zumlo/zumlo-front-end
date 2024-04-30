@@ -1,4 +1,4 @@
-import { reg } from "./regex";
+import { reg } from "../utils/regex";
 
 export const resetFields: any = [
     {

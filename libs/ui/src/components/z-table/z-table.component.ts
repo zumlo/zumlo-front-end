@@ -11,7 +11,7 @@ import { UiModule } from '../../modules/ui/ui.module';
   templateUrl: './z-table.component.html',
   styleUrl: './z-table.component.scss',
 })
-export class ZTableComponent implements OnInit ,OnChanges, AfterViewInit{
+export class ZTableComponent implements OnInit, OnChanges, AfterViewInit {
 
   @Input() tableConfig: any;
   @Input() search: any;
@@ -19,6 +19,7 @@ export class ZTableComponent implements OnInit ,OnChanges, AfterViewInit{
   @Output() viewInfo = new EventEmitter();
   @Output() editInfo = new EventEmitter();
   @Output() deleteInfo = new EventEmitter();
+  @Output() tableDataOutput = new EventEmitter<any>();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild('form') form: any;
@@ -30,7 +31,9 @@ export class ZTableComponent implements OnInit ,OnChanges, AfterViewInit{
 
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { 
+    this.sendTableDataToParent()
+  }
 
   ngOnChanges() {
     this.createTableData(); //Initial this function will execute.
@@ -39,7 +42,7 @@ export class ZTableComponent implements OnInit ,OnChanges, AfterViewInit{
   ngAfterViewInit() {
     if (this.tableConfig) {
       this.tableConfig.tableHeaders = this.tableConfig.tableHeaders.map((item: string) => item.toLowerCase()); // It will change the keys of the header to the lower case.
-      this.tableConfig.tableData.map((item: object) => { 
+      this.tableConfig.tableData.map((item: object) => {
         Object.keys(item).forEach(controlName => {
           return controlName.toLowerCase();  // It will change the value to the lower case.
         });
@@ -92,4 +95,9 @@ export class ZTableComponent implements OnInit ,OnChanges, AfterViewInit{
     this.createTableData();
   }
 
+  sendTableDataToParent() {
+    // if (this.tableData) {
+      this.tableDataOutput.emit(this.tableConfig?.tableData); // Emitting table data to the parent component
+    // }
+  }
 }

@@ -35,6 +35,7 @@ export * from './components/charts/z-area-chart/z-area-chart.component';
 export * from './components/z-carousel-3d/z-carousel-3d.component';
 export * from './components/statistics/statistics.component'
 export * from './components/common-card/common-card.component'
+export * from './components/tabs/tabs.component'
 
 // directives
 export * from './directives/dynamic-field/dynamic-field.directive';
@@ -47,9 +48,10 @@ export * from './utils/validation-constants';
 export * from './utils/us-states';
 export * from './utils/login-fields';
 export * from './utils/forget-fields';
-export * from './utils/reset-fields';
 export * from './utils/validator';
 export * from './utils/sub-dashboard';
+export * from './utils/tabs';
+export * from './utils/reset-fields';
 
 // guards
 export * from './guards/auth/auth.guard';

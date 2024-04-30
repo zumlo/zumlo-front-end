@@ -1,4 +1,11 @@
-import { Component, EventEmitter, Inject, Input, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Inject,
+  Input,
+  OnInit,
+  Output,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormGroup } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
@@ -13,33 +20,16 @@ import { ZSimpleButtonComponent } from '../z-simple-button/z-simple-button.compo
   styleUrl: './z-dialog.component.scss',
 })
 export class ZDialogComponent implements OnInit {
-
   @Input() group!: FormGroup;
   @Input() config!: any;
-  @Input() markAsDirty!: boolean;
   @Output() changed = new EventEmitter();
-
-  // Button name or action.
-  cancelBtn = {
-    class: 'button',
-    name: 'Cancel'
-  }
-  saveBtn = {
-    class: 'button',
-    name: 'Save',
-  }
-  closeBtn = {
-    name: "close",
-    class: 'icon delete',
-    type: "icon"
-  }
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
     public dialogRef: MatDialogRef<ZDialogComponent>
-  ) { }
+  ) {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   // While saving the data it will check the validation on the formControl.
   onConfirmClick(): void {
@@ -52,5 +42,9 @@ export class ZDialogComponent implements OnInit {
     } else {
       this.dialogRef.close(true);
     }
+  }
+
+  close() {
+    this.dialogRef.close();
   }
 }

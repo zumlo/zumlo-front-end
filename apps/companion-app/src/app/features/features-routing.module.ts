@@ -5,12 +5,13 @@ import { SuperAdminDashboardComponent } from './components/z-super-admin-dashboa
 import { ClinicianDashboardComponent } from './components/z-clinician-dashboard/clinician-dashboard.component';
 import { authGuard } from '@zumlo/ui';
 import { SeekerDashboardComponent } from './components/z-seeker-dashboard/seeker-dashboard.component';
+import { SeekerListingGridComponent } from './components/seeker-listing-grid/seeker-listing-grid.component';
 
 const routes: Routes = [
   {
     path: '',
     component: FeatureWrapperComponent,
-    // canActivate: [authGuard],
+    canActivate: [authGuard],
     children: [
       {
         path: 'super-admin',
@@ -23,6 +24,10 @@ const routes: Routes = [
       {
         path: 'seeker',
         component: SeekerDashboardComponent
+      },
+      {
+        path: 'seeker-listing-grid',
+        component: SeekerListingGridComponent
       },
     ]
   }

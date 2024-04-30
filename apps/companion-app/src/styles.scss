@@ -18,6 +18,7 @@
 
 body {
     margin: 0;
+    overflow: hidden;
 }
 a{cursor: pointer;}
 ul{list-style: none;}
@@ -57,8 +58,10 @@ button{cursor: pointer;}
 }
 .main{
     background-color: $z-byzantine-lite-2;
-    padding-top: 6.5rem;
+    padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+    overflow: auto;
+    height: calc(100vh - 69px);
 }
 img{
     max-width: 100%;
@@ -80,5 +83,24 @@ img{
     width: 50%;
 }
 .toast-container .toast-info {
-    background-color: #043a4e;
+    background-color: #ff9d48;
+    box-shadow: none;
+     &:hover{
+    box-shadow: none;
+
+    }
+}
+.toast-container .toast-success {
+    box-shadow: none!important;
+     &:hover{
+         box-shadow: none!important;
+
+    }
+}
+
+.toast-container .ngx-toastr{
+    box-shadow: none!important;
+    &:hover{
+        box-shadow: none!important;
+    }
 }

@@ -18,7 +18,6 @@ const DYNAMIC_FIELDS: { [type: string]: Type<DynamicFieldType> } = {
   'checkbox': ZCheckboxComponent,
   'tel': ZInputMaskComponent,
   'email': ZInputTextComponent,
-  'dialog': ZDialogComponent,
   'password': ZPasswordComponent,
   'number': ZInputNumberComponent
 }

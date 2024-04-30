@@ -12,8 +12,8 @@
                 </a>
                 <div class="sidebar">
                     <div class="searchbar">
-                        <input type="text"  placeholder="Type Here To Search..." [ngClass]="{'searchToggle': showSearch}">
-                        <a class="search-btn flex items-center justify-center bg-[#cbe2d1] rounded-full h-[30px] w-[30px] text-[#043a4e] font-semibold text-sm" (click)="showSearch = !showSearch">
+                        <input type="text" [(ngModel)]="searchText"  placeholder="Type Here To Search..." [ngClass]="{'searchToggle': showSearch}">
+                        <a class="search-btn flex items-center justify-center bg-[#cbe2d1] rounded-full h-[30px] w-[30px] text-[#043a4e] font-semibold text-sm" (click)="inputToggle()">
                             <span class="material-symbols-outlined text-xl"> search</span>    
                         </a>
                     </div>

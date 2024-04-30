@@ -5,10 +5,10 @@
         <div class="heading">
           <h1>Seeker Management</h1>
         </div>
-        <!-- @for (config of configs; track $index) {
-          <ng-container zDynamicComponent [config]="config"></ng-container>
-          } -->
-        <div class="dashboardData seekersDashboard">
+        @for (config of configs; track $index) {
+          <ng-container zDynamicComponent [config]="config" (update)="emitButton($event)"></ng-container>
+          }
+        <!-- <div class="dashboardData seekersDashboard">
           <div class="rightCol">
             <div class="plans_col col-6">
               <div class="reminderCol">
@@ -67,7 +67,7 @@
                 </div>
               </div>
               <div class="seekerCharts">
-                <!-- <z-area-chart [config]="areaChartOptions"></z-area-chart> -->
+                 <z-area-chart [config]="areaChartOptions"></z-area-chart> 
                 <div class="seekrsInfo">
                   <div class="onboardSeekers">
                     <h5>300+</h5>
@@ -242,7 +242,7 @@
                         <a href=""
                           >Mindfulness and Relaxation</a
                         >
-                        <!-- <p>2 Questions</p> -->
+                         <p>2 Questions</p>
                         <div class="appointmentType">
                           <p>Bipolar Disorder</p>
                           <p> Dec 06, 2023</p>
@@ -268,7 +268,7 @@
                 
               </div>
             </div>
-          </div>
+          </div> -->
       </div>
     </div>
   </div>

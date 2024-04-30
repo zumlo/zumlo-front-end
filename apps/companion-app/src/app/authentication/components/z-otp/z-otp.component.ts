@@ -62,7 +62,7 @@ export class ZOtpComponent implements OnDestroy {
 
   resendOtp(){
     this.startTimer();
-    const email = this.storage.getSessionStorage('email')!
+    const email = JSON.parse(this.storage.getSessionStorage('forgotUser')!).email
     let requiredData: forget = {
       email: email,
     }

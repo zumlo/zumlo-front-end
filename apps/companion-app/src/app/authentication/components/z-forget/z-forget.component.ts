@@ -30,7 +30,7 @@ export class ZForgetComponent implements OnDestroy {
     this.subscription.add(this.authentication.forgotPassword(requiredData).subscribe({
       next: (res: any) => {
         if(res.success) {
-          this.storage.setSessionStorage('forgotUser', JSON.stringify({email: res.data.email, id: res.data.id}))
+          this.storage.setSessionStorage('forgotUser', JSON.stringify({email: this.form.value.email, id: res.data.userId}))
           this._router.navigateByUrl('/auth/otp-verify');
         }
       },

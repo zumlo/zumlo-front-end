@@ -12,9 +12,17 @@ export interface pieChartConfigs {
     colors: string[];
     dataLabels: {
       style: {
-        colors: string[];
-      };
-    };
+        fontSize: 'string',
+        fontWeight: "string"
+      },
+    },
+    tooltip: {
+      enabled: boolean,
+      fillSeriesColor: boolean,
+      theme: 'string',
+      style: {
+        fontSize: 'string'
+      },
 
     responsive: [
       {
@@ -30,4 +38,5 @@ export interface pieChartConfigs {
       }
     ];
   };
+}
 }

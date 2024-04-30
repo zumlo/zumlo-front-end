@@ -1,0 +1,66 @@
+@import '../../../../../apps/companion-app/src/assets/styles/color-variables';
+@import '../../../../../apps/companion-app/src/assets/styles/typography';
+.modalPopup {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  background: $z-byzantine;
+  position: relative;
+  padding: 50px 0px;
+  text-align: center;
+  color: $z-lightgray;
+  h1 {
+    margin: 1rem 0px;
+    font-size: $sub-caption;
+    line-height: 2rem;
+    font-weight: 700;
+  }
+  p {
+    font-size: $sm-text;
+    line-height: 1.5rem;
+  }
+  .crossIcon {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    color: $z-lightgray;
+  }
+  .btn-block {
+    width: 100%;
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0px 0px 0px;
+  }
+  .icons {
+    span {
+      font-size: 70px;
+      color: $z-lightgray;
+    }
+  }
+}
+::ng-deep {
+  .mdc-dialog__surface {
+    background-color: transparent !important;
+  }
+  .btn {
+    background-color: $z-teal !important;
+    font-weight: 500 !important;
+    font-size: 0.875rem !important;
+    line-height: 1.25rem !important;
+    text-transform: uppercase !important;
+    color: $z-lightgray !important;
+    padding: 0.75rem 2.5rem !important;
+    box-shadow: none !important;
+    border-radius: 0.5rem !important;
+    height: unset !important;
+  }
+  .btn-pri {
+    background-color: transparent !important;
+    border: 1px solid $z-teal !important;
+  }
+}

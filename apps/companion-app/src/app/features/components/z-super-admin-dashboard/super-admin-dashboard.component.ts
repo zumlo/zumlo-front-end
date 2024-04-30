@@ -12,7 +12,7 @@ export class SuperAdminDashboardComponent {
   constructor(private render: Renderer2) {}
 
   showWidgetDropdown: boolean = false;
-  pieChartOptions: pieChartConfigs = {
+  pieChartOptions: any = {
     chartOptions: {
       series: [28, 20, 27, 20, 5],
       chart: {
@@ -32,10 +32,18 @@ export class SuperAdminDashboardComponent {
       colors: ['#cbe2d1', '#4ea692', '#1b5c74', '#6d597a', '#ff9d48'],
       dataLabels: {
         style: {
-          colors: ['#cbe2d1', '#4ea692', '#1b5c74', '#6d597a', '#ff9d48'],
+          fontSize: '10px',
+          fontWeight: "normal"
         },
       },
-
+      tooltip: {
+        enabled: true,
+        fillSeriesColor: false,
+        theme: 'light',
+        style: {
+          fontSize: '12px'
+        },
+      },
       responsive: [
         {
           breakpoint: 480,
@@ -51,7 +59,7 @@ export class SuperAdminDashboardComponent {
       ],
     },
   };
-  donutChartOptions: donutChartConfigs = {
+  donutChartOptions: any = {
     chartOptions: {
       series: [20, 10, 20, 25, 25],
       chart: {
@@ -71,10 +79,18 @@ export class SuperAdminDashboardComponent {
       colors: ['#cbe2d1', '#4ea692', '#1b5c74', '#043a4e', '#ff9d48'],
       dataLabels: {
         style: {
-          colors: ['#043a4e', '#cbe2d1', '#cbe2d1', '#cbe2d1', '#043a4e'],
+          fontSize: '10px',
+          fontWeight: "normal"
         },
       },
-
+      tooltip: {
+        enabled: true,
+        fillSeriesColor: false,
+        theme: 'light',
+        style: {
+          fontSize: '12px'
+        },
+      },
       responsive: [
         {
           breakpoint: 480,

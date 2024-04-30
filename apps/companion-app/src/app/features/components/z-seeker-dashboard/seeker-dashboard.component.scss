@@ -1,15 +1,42 @@
 @import "../../../../assets/styles/color-variables";
 @import "../../../../assets/styles/typography";
+@import "../../../../assets/styles/mixin";
+
 .seekersDashboard{
     width: 100%;
+    .plans_col{
+        @include for-desktop-down{
+            width: 47%;
+            max-width: 47%;
+        }
+        @include for-tablet-portrait-up{
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    .rightCol{
+        @include for-desktop-down{
+            gap: 1rem;
+        }
+    }
     .inviationcolumn {
         max-width: 49%;
         width: 49%;
+        @include for-tablet-portrait-up{
+            width: 100%;
+            max-width: 100%;
+        }
     }
     .reminderCol{
         width: 100%;
         background-color: $z-ocean;
         padding:1rem 1rem 3rem 1rem;
+        @include for-desktop-down{
+            padding: 1rem;
+        } 
+        @include for-tablet-portrait-up{
+            padding-bottom: 3rem;
+        } 
         .head{
             margin-bottom: 1.5rem; 
             font-size: $sub-caption;
@@ -25,6 +52,13 @@
             .satics{
                 width: 40%;
                 position: relative;
+                @include  for-desktop-down{
+                    width: 100%;
+                }
+                @include  for-tablet-portrait-up{
+                    width: 30%;
+                }
+            
                 .number{
                     width: 6rem; 
                     height: 6rem; 
@@ -37,6 +71,7 @@
                     border-radius: 100%;
                     background: $z-teal;
                     color: $z-ocean;
+                    
                 }
                 .numberTwo{
                     background-color: $z-orange-color;
@@ -46,6 +81,7 @@
                     top: -0.5rem; 
                     left: 5rem; 
                     z-index: 10; 
+                 
                 }
                 .numberThree{
                     width: 4rem;
@@ -55,6 +91,8 @@
                     position: absolute;
                     top: 2rem; 
                     left: 5rem; 
+                    
+
                 }
                 .numberFour{
                     color: $z-teal;
@@ -65,9 +103,17 @@
                     z-index: 10; 
                     left: 4rem;
                     top: 5rem;
+                    
                 }
             }
             .seekersStatus{
+                @include for-desktop-down{
+                    margin-top: 3rem;
+                }
+                @include for-tablet-portrait-up{
+                    margin-top: 0rem;
+                
+                }
                 .seeekerStatusInner{
                     width: 100%;
                     color: $z-teal;
@@ -114,8 +160,17 @@
         margin-top: 1.5rem;
         gap: 1.5rem;
         justify-content: space-between;
+        @include for-desktop-down{
+            gap: 1rem;
+        }
         .plans{
             width: 47%;
+            @include for-desktop-down{
+                width: 46%;
+            }
+            @include for-tablet-portrait-up{
+                width: 48%
+            }
             &:nth-child(2){
                 a{
                     background-color: transparent;
@@ -129,17 +184,28 @@
                 border-radius: 1.5rem; 
                 border: 2px solid $z-byzantine-lite-3; 
                 background-color: $z-byzantine-lite-3;
+                @include for-desktop-down{
+                padding: 1rem 1rem;
+                    
+                }
             .plansName{     
                 strong{
                     font-size:$sub-caption;
                     line-height: 2rem; 
                     font-weight: 700; 
                     color: $z-lightgray;
+                    @include for-desktop-down{
+                        font-size: $sm-text;
+                    }
                 }
                 p{
                     margin-bottom: 1rem; 
                     font-weight: 600; 
                     color: #cbe2d1;
+                    @include for-desktop-down{
+                        font-size: $sx-text;
+                        margin:0;
+                    }
                 }
             }
             .addbtn{
@@ -157,7 +223,11 @@
                     cursor: pointer; 
                     color: $z-ocean;
                     background: $z-lightgray;
-
+                    @include for-desktop-down{
+                        width: 2rem; 
+                        height: 2rem; 
+                        margin-top: 0.5rem;
+                    }
                 }
             }
         }
@@ -178,6 +248,9 @@
             display: flex;
             justify-content: space-between;  
             padding: 1.5rem;
+            @include for-desktop-down{
+                padding: 1rem;
+            }
             .onboardSeekers{
                 width: 100%;
                 h5{

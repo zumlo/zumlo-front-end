@@ -1,8 +1,24 @@
-<div class="model_otr">
-  <z-simple-button (buttonClick)="dialogRef.close()">close</z-simple-button>
-  <h1> {{data?.heading}} </h1>
-  <p> {{data?.title}} </p>
-  <div>
-    <z-simple-button (buttonClick)="onConfirmClick()">save</z-simple-button>
+<div class="modalPopup">
+  <mat-icon class="crossIcon" (click)="close()">close</mat-icon>
+  <div class="icons">
+    <span class="material-symbols-outlined">
+      check_circle
+  </span>
+  </div>
+  <div class="model_otr">
+    <h1>{{ data?.heading }}</h1>
+    <p>{{ data?.label }}</p>
+    <div class="btn-block">
+      <z-simple-button
+        [config]="{ class: 'btn btn-pri' }"
+        (buttonClick)="dialogRef.close()"
+        >{{ data?.cancelButton }}</z-simple-button
+      >
+      <z-simple-button
+        [config]="{ class: 'btn btn-sec' }"
+        (buttonClick)="onConfirmClick()"
+        >{{ data?.confirmButton }}</z-simple-button
+      >
+    </div>
   </div>
 </div>
