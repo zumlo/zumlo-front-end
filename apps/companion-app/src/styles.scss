@@ -82,7 +82,7 @@ img{
     max-width: 50%;
     width: 50%;
 }
-.toast-container .toast-info {
+.toast-container .toast-info, .toast-container .toast-error {
     background-color: #ff9d48;
     box-shadow: none;
      &:hover{
