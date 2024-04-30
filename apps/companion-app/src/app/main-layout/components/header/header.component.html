@@ -72,7 +72,7 @@
                     <!-- Profile Dropdown  -->
                     <button type="button" class="user_profile" (click)="profileBtn()">
                         <img  src="../../../../assets/images/user-7.jpg" alt="user photo">
-                        <div class="user_deatils">
+                        <div class="user_deatils" [class.show]="showProfile" #profileDetails>
                             <p >Jack Hallick</p>
                             <p style="text-transform: uppercase;">Super Admin</p>
                         </div>

@@ -20,7 +20,8 @@ export class HeaderComponent {
     private renderer: Renderer2,
     private _router: Router,
     private storageService: ZStorageService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private _eref: ElementRef
   ) {
     this.renderer.listen('window', 'click', (e: Event) => {
       if (e.target !== this.navbarToggleButton?.nativeElement) {
@@ -43,7 +44,22 @@ export class HeaderComponent {
 
   profileBtn() {
     this.showProfile = !this.showProfile;
+    if (this.showProfile) {
+      // Add event listener when the profile is shown
+      document.addEventListener('click', this.closeProfileOnOutsideClick.bind(this));
+    } else {
+      // Remove event listener when the profile is hidden
+      document.removeEventListener('click', this.closeProfileOnOutsideClick.bind(this));
+    }
   }
+
+  closeProfileOnOutsideClick (event: MouseEvent) {
+    // Check if the click is outside the profile details
+    if (!this._eref.nativeElement.contains(event.target)) {
+      this.showProfile = false;
+    }
+  }
+
 
   logout() {
     let dialogRef = this.dialog.open(ZDialogComponent, {
