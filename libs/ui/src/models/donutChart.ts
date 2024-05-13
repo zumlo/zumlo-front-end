@@ -1,4 +1,4 @@
-export interface donutChartConfigs {
+export interface DonutChartConfigs {
   chartOptions: {
     series: number[];
     chart: {

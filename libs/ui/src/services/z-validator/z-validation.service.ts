@@ -57,7 +57,7 @@ export class ZValidationService {
 
   // pattern error check. 
   private _getPatternMessage(value: string, config: any) {
-    return config.patternMessage;
+    return config.patternMessage ? config.patternMessage : config.patternMessageTwo;
   }
 
   // length error check.

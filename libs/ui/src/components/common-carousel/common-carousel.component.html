@@ -1,63 +1,28 @@
 <div class="wrapper">
   <owl-carousel-o [options]="config">
       @for (slide of config?.imageData; track $index) {
-        @if(config.slider==1){
-              <ng-template class="slide" carouselSlide *ngIf="config.slider==1">
+              <ng-template class="slide" carouselSlide>
               <mat-card class="example-card">
-                  <div class="assementSliderInner">
-                    <p>{{slide.heading}}</p>
+                  <div class="assementSliderInner" [ngStyle]="{'backgroundColor': config.bgColor, 'border': config.border}">
+                    <p [ngStyle]="{'color': slide.textColor}">{{slide.heading}}</p>
                     <ul>
-                      <li>{{slide.type}}</li>
-                      <li>{{slide.questions}}</li>
+                      <li [ngStyle]="{'backgroundColor': slide.bgColor1, 'color': slide.textColor}">{{slide.type}}</li>
+                      <li [ngStyle]="{'backgroundColor': slide.bgColor2, 'color': slide.textColor}">{{slide.questions}}</li>
                     </ul>
                     <div class="assementassign">
                       <p>
-                        <span class="material-symbols-outlined text-md"
-                          >{{slide.assesmentType}}</span
+                        <span class="material-symbols-outlined text-md"  [ngStyle]="{'color': slide.textColor}">{{slide.assesmentType}}</span
                         >
-                        <span class="text-sm">{{slide.assignType}}</span>
+                        <span class="text-sm" [ngStyle]="{'color': slide.textColor}">{{slide.assignType}}</span>
                       </p>
                       <span>
-                        <span>{{slide.assign}}</span>
+                        <span [ngStyle]="{'color': slide.textColor}">{{slide.assign}}</span>
                         <!-- <a href="#">+</a> -->
                       </span>
                     </div>
                   </div>
               </mat-card>
             </ng-template>
-          }
-            @else{
-            <ng-template class="slide" carouselSlide>
-            <div class="slidercolumn">
-              <div class="sliderInner">
-                <div class="dateTime">
-                  <p>{{slide.type}}</p>
-                  <span>Tue, 02 Jan, 2024</span>
-                </div>
-                <div class="lifestyle">
-                  <h3>{{slide.heading}}</h3>
-                  <p>
-                    {{slide.description}}
-                  </p>
-                </div>
-                <div class="enroll">
-                  <div class="image_block">
-                    <img
-                      [src]="slide.url"
-                      [alt]="slide.heading"
-                    />
-                    <img
-                      [src]="slide.url1"
-                      [alt]="slide.heading"
-                      class="images"
-                    />
-                    <a href="#" class="images">+5</a>
-                  </div>
-                </div>
-              </div>
-              </div>
-            </ng-template>
-          }
           }
   </owl-carousel-o>  
 </div>

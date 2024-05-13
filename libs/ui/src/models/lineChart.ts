@@ -1,4 +1,4 @@
-export interface lineChartConfigs {
+export interface LineChartConfigs {
   chartOptions: {
     series: [
       {

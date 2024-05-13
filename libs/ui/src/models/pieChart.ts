@@ -1,4 +1,4 @@
-export interface pieChartConfigs {
+export interface PieChartConfigs {
   chartOptions: {
     series: number[];
     chart: {

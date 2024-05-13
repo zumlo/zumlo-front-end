@@ -1,0 +1,17 @@
+@import "../../../../../apps/companion-app/src/assets/styles/color-variables";
+@import "../../../../../apps/companion-app/src/assets/styles/typography";
+@import "../../../../../apps/companion-app/src/assets/styles/mixin";
+
+.tredingAssesments{
+    width: 100%;
+    border-radius: 1.5rem;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    .tredingAssesmentsheading {
+        strong{
+            font-weight: 600;
+            font-size: $lg-text;
+            line-height: 1.75rem;
+        }
+    }
+}

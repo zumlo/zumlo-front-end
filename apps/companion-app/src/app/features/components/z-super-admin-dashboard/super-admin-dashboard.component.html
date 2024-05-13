@@ -8,204 +8,19 @@
         <div class="dashboardData superAdmindasboard">
           <div class="rightCol">
             <div class="plans_col col-6">
-              <div class="reminderCol">
-                <div class="head">
-                  <strong>Good Morning!</strong>
-                  <p>You have reminders left for today, please check<p>
-                </div>
-                <div class="appointmentReminder">
-                  <svg
-                    class="flex-shrink-0 w-4 h-4"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"
-                    ></path>
-                  </svg>
-                  <p>Jennie Collen has been successfully onboarded</p>
-                </div>
-                <div class="btnblock">
-                  <a
-                    >Sell all
-                    <span class="material-symbols-outlined"
-                      >arrow_right_alt</span
-                    ></a
-                  >
-                </div>
-              </div>
-
-              <!-- orginzation -->
-              <div class="orginzationOuter">
-                <div class="head">
-                  <strong>Organizations</strong>
-                  <p>Total 9 Organizations</p>
-                </div>
-                <ul class="Organizationslists">
-                  <li>
-                    <div class="userinfo">
-                      <h5><a>Kaiser Permanente</a></h5>
-                      <span>Psychologist</span>
-                    </div>
-                    <span class="patientalloted">Patients : 50</span>
-                  </li>
-                  <li>
-                    <div class="userinfo">
-                      <h5><a>Premera Blue Cross</a></h5>
-                      <span>Psychiatrist</span>
-                    </div>
-                    <span class="patientalloted">Patients: 40</span>
-                  </li>
-                  <li>
-                    <div class="userinfo">
-                      <h5><a>Elevance Health</a></h5>
-                      <span>Psychoanalyst</span>
-                    </div>
-                    <span class="patientalloted">Patients : 10</span>
-                  </li>
-                  <li>
-                    <div class="userinfo">
-                      <h5><a>United Healthcare</a></h5>
-                      <span>Psychoanalyst</span>
-                    </div>
-                    <span class="patientalloted">Patients : 30</span>
-                  </li>
-                  <li>
-                    <div class="userinfo">
-                      <h5><a>Kaiser Permanente</a></h5>
-                      <span>Neuropsychiatist</span>
-                    </div>
-                    <span class="patientalloted">Patients : 20</span>
-                  </li>
-                  <li>
-                    <div class="userinfo">
-                      <h5>
-                        <a>Molina Healthcare Inc.</a>
-                      </h5>
-                      <span>Psychotherapist</span>
-                    </div>
-                    <span class="patientalloted">Patients : 30</span>
-                  </li>
-                </ul>
-                <div class="view-all">
-                  <a
-                    ><span class="material-symbols-outlined">visibility</span>
-                    VIEW All</a
-                  >
-                </div>
-              </div>
-
-              <!-- slider -->
-
-              <div class="assesments">
-                <div class="assesmentsInner">
-                  <div class="reminderCol wellnessPlan">
-                    <div class="head">
-                      <strong>Top Trending Assessments</strong>
-                    </div>
-                    <div class="assementSlider">
-                         <z-common-carousel [config]="configs" style="width: 100%"></z-common-carousel>
-                    </div>
+                @for (sectionArr of dashboardwidgets; track $index) {
+                  <div class="columns z-dashboard-col-{{$index + 1}} ">
+                    @for (config of sectionArr; track $index) {
+                    <ng-container zDynamicComponent [config]="config" (update)="emitButton($event)"></ng-container>  
+                    }
                   </div>
-                </div>
+                }
               </div>
-            </div>
-            <div class="col-6 inviationcolumn">
-              <div class="invitation onboardOrginazationouter">
-                <a class="onboardOrginazation">
-                  <h4>Onboard Organization</h4>
-                  <p>
-                    Your onboarded 3 organization Yestersday, add more today by
-                    click on below button.
-                  </p>
-                  <span class="material-symbols-outlined">add</span>
-                </a>
-                <div class="add" (click)="showWidget()">
-                  <span
-                    class="material-symbols-outlined "
-                    data-drawer-target="drawer-right-example"
-                    data-drawer-show="drawer-right-example"
-                    data-drawer-placement="top"
-                    aria-controls="drawer-right-example" >
-                    add_circle
-                  </span>
-                  <div class="tooltip">Widget</div>
-                </div>
-              </div>
-              <div class="conditionChart">
-                <div class="head">
-                  <strong>Conditions</strong>
-                </div>
-                <div class="chartIng">
-                  <!-- <img src="../../../../assets/images/conditionChart.png"/> -->
-                  <z-z-donut-chart [config]="donutChartOptions"></z-z-donut-chart>
-                  
-                </div>
-                
-              </div>
-              <div class="seekersList">
-                <div class="head">
-                  <strong>Seekers</strong>
-                  <p>Total 110 Seekers</p>
-                </div>
-                <ul>
-                  <li>
-                    <div class="seekersListinner">
-                      <img
-                        src="../../../../assets/images/user-1.jpg"
-                        alt="user photo"
-                      />
-                      <h5><a>Jennie Collen</a></h5>
-                    </div>
-                    <a>Clinician : Jese Leos</a>
-                  </li>
-                  <li>
-                    <div class="seekersListinner">
-                      <img
-                        src="../../../../assets/images/user-1.jpg"
-                        alt="user photo"
-                      />
-                      <h5><a>Neil Sims</a></h5>
-                    </div>
-                    <a>Clincian : Mary Smith</a>
-                  </li>
-                  <li>
-                    <div class="seekersListinner">
-                      <img
-                        src="../../../../assets/images/user-1.jpg"
-                        alt="user photo"
-                      />
-                      <h5><a>Leslie Livingston</a></h5>
-                    </div>
-                    <a>Clincian : Colerd Baer</a>
-                  </li>
-                </ul>
-                <div class="view-all">
-                  <a>View all</a>
-                </div>
-              </div>
+          
               
-              <!--wellness slider -->
-              <div class="reminderCol wellnessPlan superAdminWellness">
-                <div class="head">
-                  <strong>Wellness Plans</strong>
-                </div>
-                <z-carousel-3d [config]="imgData"></z-carousel-3d>
-              </div>
-            </div>
-          </div>
+          
           <div class="leftCol">
-            <div class="conditionChart ClinicianSpecialities">
-              <div class="head">
-                <strong>Clinician Specialities</strong>
-              </div>
-              <div class="cli-cart">
-                <z-pie-chart [config]="pieChartOptions"></z-pie-chart>
-                <!-- <img src="../../../../assets/images/cli-chart.png"/> -->
-              </div>
-            </div>
+<!--            
             <div class="pendinginvites">
               <div class="pendinginvites-heading">
                 <h4>Pending Invites for Super Admin</h4>
@@ -370,11 +185,11 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
-    </div>
+    </div> 
   </div>
 </div>
 
@@ -383,7 +198,7 @@
 
 
 <!-- jumbo colors -->
-<div class="jumbodropdown" [class.dropdownActive]="showWidgetDropdown">
+<!-- <div class="jumbodropdown" [class.dropdownActive]="showWidgetDropdown">
   <div class="jumboDropDownInner">
     <div class="header">
         <div class="logo">
@@ -510,4 +325,4 @@
     </ul>
     </div>
   </div>
-</div>
+</div> -->

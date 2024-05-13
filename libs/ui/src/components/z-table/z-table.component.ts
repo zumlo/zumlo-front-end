@@ -1,20 +1,24 @@
-import { AfterViewInit, Component, EventEmitter, Input, OnChanges, OnInit, Output, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Input, OnChanges, OnInit, Output, ViewChild, input } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { UiModule } from '../../modules/ui/ui.module';
+import { ZSimpleButtonComponent } from "../z-simple-button/z-simple-button.component";
+import { deleteBtn, editBtn } from '../../enums/table_enum';
 
 @Component({
-  selector: 'z-table',
-  standalone: true,
-  imports: [UiModule],
-  templateUrl: './z-table.component.html',
-  styleUrl: './z-table.component.scss',
+    selector: 'z-table',
+    standalone: true,
+    templateUrl: './z-table.component.html',
+    styleUrl: './z-table.component.scss',
+    imports: [UiModule, ZSimpleButtonComponent]
 })
 export class ZTableComponent implements OnInit, OnChanges, AfterViewInit {
-
+  editBtn: typeof editBtn = editBtn;
+  deleteBtn: typeof deleteBtn = deleteBtn;
   @Input() tableConfig: any;
   @Input() search: any;
+  @Input() configs: any;
   @Output() statusInfo = new EventEmitter();
   @Output() viewInfo = new EventEmitter();
   @Output() editInfo = new EventEmitter();
@@ -40,9 +44,9 @@ export class ZTableComponent implements OnInit, OnChanges, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    if (this.tableConfig) {
-      this.tableConfig.tableHeaders = this.tableConfig.tableHeaders.map((item: string) => item.toLowerCase()); // It will change the keys of the header to the lower case.
-      this.tableConfig.tableData.map((item: object) => {
+    if (this.tableConfig?.length) {
+      this.tableConfig.tableHeaders = this.tableConfig.tableHeaders?.map((item: string) => item.toLowerCase()); // It will change the keys of the header to the lower case.
+      this.tableConfig.tableData?.map((item: object) => {
         Object.keys(item).forEach(controlName => {
           return controlName.toLowerCase();  // It will change the value to the lower case.
         });

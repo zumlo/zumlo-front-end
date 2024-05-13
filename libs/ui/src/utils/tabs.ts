@@ -2,12 +2,15 @@ import { TabsGroup } from "../models/tabs";
 
 export const tabGroup : TabsGroup[] = [
     {
-        name: 'Anxiety'
+        name: 'Anxiety',
+        tableConfig: {}
     },
     {
-        name: 'Depression'
+        name: 'Depression',
+        tableConfig: {}
     },
     {
-        name: 'Insommia'
+        name: 'Insommia',
+        tableConfig: {}
     }
 ]

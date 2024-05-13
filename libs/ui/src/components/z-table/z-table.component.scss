@@ -1,0 +1,130 @@
+@import "../../../../../apps/companion-app/src/assets/styles/color-variables";
+@import "../../../../../apps/companion-app/src/assets/styles/typography";
+@import "../../../../../apps/companion-app/src/assets/styles/mixin";
+
+
+
+
+::ng-deep{
+.userTabel{
+    width: 100%;
+        thead{
+
+            padding: 1rem;
+            color: $z-lightgray;
+            background-color: #766383!important;
+            th{
+                .mat-sort-header-content{
+                    font-size: $sm-text;
+                    line-height: 1.5rem; 
+                    font-weight: 600; 
+                    text-transform: capitalize; 
+                    color: $z-lightgray;
+
+                }
+            }
+        }
+        tbody{
+            .seekerData{
+                display: flex;
+                font-size: $sx-text;
+                line-height: 1.25rem; 
+                white-space: nowrap; 
+                color: $z-lightgray;
+                align-items: center;
+                gap: 1rem;
+                @include for-tablet-landscape-down{
+                    font-size: $small-text;
+                }
+                
+                img{
+                    width: 2rem;
+                    height: 2rem;
+                    overflow: hidden;
+                    object-fit: cover;
+                    border-radius: 9999px;
+                }
+        
+                    a{
+                        color: $z-lightgray;
+                        font-size: $sx-text;
+                        line-height: 1.25rem;
+                        white-space: nowrap; 
+                        &:hover{
+                            color: $z-orange-color;
+                        }
+                        @include for-tablet-landscape-down{
+                            font-size: $small-text;
+                        }
+                    }
+                    .conditions{
+                        padding: 0.25rem 0.75rem; 
+                        border-radius: 9999px; 
+                        font-size: $small-text;
+                        line-height: 1rem; 
+                        font-weight: 500; 
+                        background: $Z-byzantine-dark3;
+                        color: $z-lightgray;
+                    }
+                    .statusActive{
+                        background-color: $z-teal;
+                    }
+                    .statusInactive{
+                        background-color: $z-orange-color;
+                        color:$z-ocean;
+                    }  
+            }
+        }
+        
+    }
+   .ng-trigger-transformPanel{
+    background-color: $z-lightgray!important;
+   }
+}
+
+
+
+td.mat-cell{
+    &.noDataTable {
+        width: 100%;
+        text-align: center;
+        padding: 30px 20px;
+        font-size: $lg-text;
+        color: $z-lightgray;
+        text-transform: uppercase;
+        font-weight: 600;
+}
+}
+
+.actionOtr {
+    display: flex;
+}
+
+
+.actionOtr{
+   .iconBtn{
+    width: 40px;
+    ::ng-deep{
+        .mat-mdc-raised-button:not(:disabled){
+            color: #4ea692!important;
+            width: 24px;
+            height: 24px;
+        }
+        .mat-mdc-raised-button.mat-primary{
+            --mdc-protected-button-container-color: unset!important;
+            --mdc-protected-button-label-text-color: unset!important; 
+            --mat-protected-button-state-layer-color: unset!important; 
+            --mat-protected-button-ripple-color: unset!important;
+        }
+        
+    }
+    &:nth-child(2){
+        ::ng-deep{
+            .mat-mdc-raised-button:not(:disabled){
+                color: #ff9d48!important;
+            }
+        }
+    }
+   }
+}
+

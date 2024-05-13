@@ -1,0 +1,38 @@
+    <div class="tredingAssesmentlist" [ngStyle]="{'backgroundColor':config.bgColor}">
+      <ul>
+        <li>
+          <div class="column">
+            <a href="" [ngStyle]="{'color':config.headingColor}">{{config.subHeading}}</a>
+            <p [ngStyle]="{'color':config.textColor}">{{config?.questions}}</p>
+            <div class="appointmentType">
+              @if(config.assessmentType){
+              <p [ngStyle]="{'backgroundColor':config.bgColor1, 'color':config.headingColor}">{{config?.assessmentType}}</p>
+              }
+              @else{
+              <p [ngStyle]="{'backgroundColor':config.bgColor1, 'color':config.headingColor}">{{config?.healthIssueType}}</p>
+              }
+              <p [ngStyle]="{'backgroundColor':config.bgColor2, 'color':config.headingColor}">{{config.date}}</p>
+            </div>
+            @if(config.description){
+            <p [ngStyle]="{'color':config.textColor1}">{{config?.description}}</p>
+            }
+            <div class="enroll">
+              <div class="image_block">
+                @if(config.url && config.url1){
+                <img
+                  [src]="config?.url"/>
+                <img
+                  class="images"
+                  [src]="config?.url1"
+                />
+                }
+                @else{
+                <span class="material-symbols-outlined"
+                  >{{config?.icon}}</span>
+                }
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>

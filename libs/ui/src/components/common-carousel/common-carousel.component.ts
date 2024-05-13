@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { carouselConfigs } from '../../models/carousel';
+import { CarouselConfigs } from '../../models/carousel';
 import { UiModule } from '../../modules/ui/ui.module';
 
 
@@ -14,6 +14,7 @@ import { UiModule } from '../../modules/ui/ui.module';
 export class CommonCarouselComponent {
 
   @Input() config!: any;
+  @Output() changed = new EventEmitter();
 
   constructor(
   ) { }

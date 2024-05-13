@@ -1,4 +1,4 @@
-export interface areaChartConfigs {
+export interface AreaChartConfigs {
   chartOptions: {
     chart: {
       maxWidth: string,

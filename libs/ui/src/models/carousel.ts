@@ -1,4 +1,4 @@
-export interface carouselConfigs {
+export interface CarouselConfigs {
   loop: boolean;
   autoplay: boolean;
   center: boolean;

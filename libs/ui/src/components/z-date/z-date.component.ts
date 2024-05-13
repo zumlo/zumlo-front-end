@@ -17,6 +17,7 @@ export class ZDateComponent implements OnInit {
   @Input() group!: FormGroup;
   @Input() config!: any;
   @Output() changed = new EventEmitter();
+  @Input() markAsDirty!: boolean;
 
   errorMessage: string = '';
 

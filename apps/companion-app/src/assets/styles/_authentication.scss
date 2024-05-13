@@ -53,7 +53,7 @@
       padding: 2.5rem;
       border-top: 4px solid $z-orange-color;
       border-radius: 0.75rem;
-      overflow-y: auto;
+      // overflow-y: auto;
       display: flex;
       align-items: center;
 
@@ -381,4 +381,57 @@
 .ngx-toastr {
   min-width: fit-content !important;  // Specify toastr-dialog width for all devices
   width: auto;
+}
+
+.validationError {
+  ul{
+    li{
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      line-height: 10px;
+      // span{
+      //   width: 5px;
+      //   height: 5px;
+      //   background:red;
+      //   display: block;
+      //   border-radius: 100%;
+      //   margin-right: 10px;
+      // }
+      div{
+        margin-right: 10px;
+      }
+    }
+  }
+    position: absolute;
+    top: 0;
+    font-size: 12px;
+    background: #043a4e;
+    padding: 5px 15px;
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    gap: 0.2rem;
+    font-weight: 500;
+    left: -280px;
+    z-index: 9999;
+    &::after{
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 10px solid #043a4e;
+      position: absolute;
+      content: "";
+      right: -10px;
+      transform: rotate(86deg);
+    }
+}
+.z-control-oldPassword {
+    .validationError {
+      display: none;
+      &.show{
+      display: flex;
+      }
+    }
 }

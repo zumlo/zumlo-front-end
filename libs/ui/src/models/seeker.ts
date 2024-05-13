@@ -1,6 +1,6 @@
 import { buttonsConfig } from "./buttons";
 
-export interface seekerConfigItem {
+export interface SeekerConfigItem {
     name?: string,
     type?: string,
     heading?: string,

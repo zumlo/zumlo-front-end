@@ -1,29 +1,56 @@
-<table mat-table [dataSource]="tableData" matSort="true" class="mat-elevation-z8">
+<table mat-table [dataSource]="tableData" matSort="true" class="mat-elevation-z8 userTabel">
   <ng-container [matColumnDef]="column" *ngFor="let column of tableConfiguration?.tableHeaders;">
-    <th [class.w-100px]="column == 'action'" mat-header-cell *matHeaderCellDef mat-sort-header
-      [disabled]="column == 'action'"> {{column | titlecase}} </th>
+      <th [class.w-100px]="column == 'action'" mat-header-cell *matHeaderCellDef mat-sort-header
+        [disabled]="column == 'action'"> {{column | titlecase}} </th>
     <ng-container *matCellDef="let element;  let index = index">
-      <td mat-cell *ngIf="column != 'action' && column != 'status'">{{element[column]}} </td>
-      <td mat-cell *ngIf="column == 'status'">
-        <button (btnClickEvent)="updateStatus(element)"> {{element[column]}} </button>
+      @if (column !== 'action' && column !== 'image' && column !== 'status') {
+        <td mat-cell>
+          <div class="seekerData">
+          @if(column == 'Seeker') {
+            <img [src]="element['image']" alt="User Image" style="max-width: 100px; max-height: 100px;">
+            <a href="#">{{element[column]}}</a>
+          }
+          @else if(column == 'Healthconditions'){
+            @for(value of element[column]; track $index){
+              <span class="conditions">{{value}}</span>
+            }
+          }
+          @else if(column == 'Wellnessplan' || column == 'Assessments'){
+            <span class="conditions">{{element[column]}}</span>
+          }
+          @else if(column == 'Status' ){
+            <span class="conditions statusActive" [ngClass]="{'statusActive': element[column] === 'Active', 'statusInactive': element[column] === 'Inactive'}" >{{element[column]}}</span>
+          }
+          @else {
+            {{element[column]}}
+          }
+        </div>
+        </td>
+      }
+      @if (column == 'action') {
+      <td mat-cell>
+        <div class="actionOtr">
+          <z-simple-button class="iconBtn" (buttonClick)="editRecord(column.id)">
+            <mat-icon>visibility</mat-icon>
+          </z-simple-button>
+          <z-simple-button class="iconBtn" (buttonClick)="deleteRecord(column.id)">
+            <mat-icon>delete_outline</mat-icon>
+          </z-simple-button>
+        </div>
       </td>
-      <td mat-cdell *ngIf="column == 'action'">
-        <button (btnClickEvent)="viewRecord(element)">
-        </button>
-        <button (btnClickEvent)="editRecord(element)">
-        </button>
-        <button (btnClickEvent)="deleteRecord(element)">
-        </button>
-      </td>
+      }
     </ng-container>
   </ng-container>
 
+  <!-- Define header row -->
   <tr mat-header-row *matHeaderRowDef="tableConfiguration?.tableHeaders"></tr>
+  <!-- Define data row -->
   <tr mat-row *matRowDef="let row; columns: tableConfiguration?.tableHeaders;"></tr>
+  <!-- Show message when no data is available -->
   <tr class="mat-row" *matNoDataRow>
-    <td class="mat-cell noDataTable" [attr.colspan]="tableConfiguration?.tableHeaders.length">
+    <td class="mat-cell noDataTable" [attr.colspan]="tableConfiguration?.tableHeaders?.length">
       No records found...
     </td>
   </tr>
 </table>
-<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons #paginatorRef></mat-paginator>
+<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons #paginatorRef></mat-paginator> 

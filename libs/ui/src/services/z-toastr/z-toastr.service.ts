@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
-import { properties } from '../../interfaces/z-loader-interface';
+import { Properties } from '../../interfaces/z-loader-interface';
 
 
 
@@ -9,7 +9,7 @@ import { properties } from '../../interfaces/z-loader-interface';
 })
 export class ZToastrService {
   // property for toastr.
-  config: properties = {
+  config: Properties = {
     progressBar: true,
     tapToDismiss: true,
     closeButton: true,

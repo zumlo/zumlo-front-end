@@ -1,4 +1,4 @@
-export interface barChartConfigs {
+export interface BarChartConfigs {
   chartOptions: {
     series: {
       name: string;

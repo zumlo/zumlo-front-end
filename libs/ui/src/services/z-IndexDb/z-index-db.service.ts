@@ -56,8 +56,15 @@ export class ZIndexDbService {
       });
     }
   
-
-
-
+    deleteObject() {
+      const objectStore = this.db.transaction(['ecd'], 'readwrite').objectStore('ecd');
+      const objectStoreRequest = objectStore.clear();
+  
+      objectStoreRequest.onsuccess = function(event) {
+          console.log('Erase of database completed.');
+      };
+  
+    }
+    
 
 }

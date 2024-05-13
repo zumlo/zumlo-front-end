@@ -13,6 +13,8 @@ export * from './services/z-toastr/z-toastr.service';
 export * from './services/z-common-restriction/common-methods.service';
 export * from './services/z-storage/storage.service';
 export * from './services/z-IndexDb/z-index-db.service';
+export * from './services/table-data/table-data.service';
+export * from './services/seekerDashboard/seeker-dashboard.service';
 
 // components
 export * from './components/z-navbar/z-navbar.component';
@@ -33,9 +35,19 @@ export * from './components/charts/z-donut-chart/z-donut-chart.component';
 export * from './components/charts/z-bar-chart/z-bar-chart.component';
 export * from './components/charts/z-area-chart/z-area-chart.component';
 export * from './components/z-carousel-3d/z-carousel-3d.component';
-export * from './components/statistics/statistics.component'
-export * from './components/common-card/common-card.component'
-export * from './components/tabs/tabs.component'
+export * from './components/statistics/statistics.component';
+export * from './components/common-card/common-card.component';
+export * from './components/tabs/tabs.component';
+export * from './components/common-inner-trending-card/common-inner-trending-card.component';
+export * from './components/outer-card/outer-card.component';
+export * from './components/chips/chips.component';
+export * from './components/grid-common-card/grid-common-card.component';
+export * from './components/mat-menu/mat-menu.component';
+export * from './components/reminder/reminder.component';
+export * from './components/organization-card/organization-card.component';
+export * from './components/seekers-card/seekers-card.component';
+export * from './components/pending-invites-card/pending-invites-card.component';
+export * from './components/add-widgets/add-widgets.component';
 
 // directives
 export * from './directives/dynamic-field/dynamic-field.directive';
@@ -49,9 +61,10 @@ export * from './utils/us-states';
 export * from './utils/login-fields';
 export * from './utils/forget-fields';
 export * from './utils/validator';
-export * from './utils/sub-dashboard';
 export * from './utils/tabs';
 export * from './utils/reset-fields';
+export * from './utils/dropdown';
+export * from './utils/filters';
 
 // guards
 export * from './guards/auth/auth.guard';
@@ -62,3 +75,6 @@ export * from './enums/api_urls';
 
 // environments
 export * from '../../ui/src/environments/environment';
+
+// pipe
+export * from './pipes/search-pipe/search.pipe';

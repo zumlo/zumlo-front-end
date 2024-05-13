@@ -8,7 +8,9 @@ import {
 import {
   Component,
   ElementRef,
+  EventEmitter,
   Input,
+  Output,
   QueryList,
   ViewChildren
 } from "@angular/core";
@@ -24,6 +26,7 @@ import { UiModule } from "../../modules/ui/ui.module";
 })
 export class ZCarousel3dComponent {
   @Input() config:any;
+  @Output() changed = new EventEmitter();
   @ViewChildren("cell") items!: QueryList<ElementRef>;
   @ViewChildren("element") itemsView!: QueryList<ElementRef>;
   private player!: AnimationPlayer;

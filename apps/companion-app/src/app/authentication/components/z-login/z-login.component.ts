@@ -1,10 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { ZFormCreationService, ZIndexDbService, ZStorageService, loginFields } from '@zumlo/ui';
+import { ZFormCreationService, ZIndexDbService, ZStorageService, LoginFieldsConfigs } from '@zumlo/ui';
 import { AuthenticationService } from '../../services/authentication.service';
 import { Router } from '@angular/router';
-import { carouselConfigs } from 'libs/ui/src/models/carousel';
+import { CarouselConfigs } from 'libs/ui/src/models/carousel';
 import { login } from '../../models/model';
 import objectHash from 'object-hash';
 import { Subscription } from 'rxjs';
@@ -15,9 +15,9 @@ import { Subscription } from 'rxjs';
 })
 export class ZLoginComponent implements OnInit, OnDestroy {
   form: FormGroup;
-  configs: any = loginFields;
+  configs: any = LoginFieldsConfigs;
   isValid: boolean = false;
-  apiData: carouselConfigs[] = [];
+  apiData: CarouselConfigs[] = [];
   subscription = new Subscription();
   data: any
 
@@ -30,6 +30,7 @@ export class ZLoginComponent implements OnInit, OnDestroy {
         if(objects[0]) {
           this.data = objects[0].ecd;
           this.data = JSON.parse(atob(this.data))
+          debugger
           this.form.patchValue({
             email: this.data.email,
             password: this.data.password,
@@ -54,9 +55,12 @@ export class ZLoginComponent implements OnInit, OnDestroy {
     this.subscription.add(this.authentication.loginRoute(requiredData).subscribe({
       next: (res: any) => {
         
-        if(res.success){
+        if(res.success){debugger
           // This will set the encrypted data of user's credential when remember me is checked
           if(this.form.value.remember && !this.data) {
+            this.indexDb.addObject(requiredData);
+          }else if(this.data?.password != requiredData.password) {
+            this.indexDb.deleteObject();
             this.indexDb.addObject(requiredData);
           }
           this._storage.setSessionStorage('token', res.data.token);

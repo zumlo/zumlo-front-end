@@ -1,5 +1,7 @@
 @import "../../../../assets/styles/color-variables"; 
 @import "../../../../assets/styles/typography"; 
+@import "../../../../assets/styles/mixin"; 
+
 
 
 .seekerListing{
@@ -13,6 +15,9 @@
         display: flex;
         align-items: center;
         gap: 1rem;
+        @include for-tablet-portrait-up{
+            gap: 0.5rem;
+        }
         button{
             display: flex; 
             align-items: center;
@@ -25,7 +30,16 @@
             cursor: pointer;
             font-size: $sx-text;
             line-height: 1.25rem; 
+            @include for-tablet-portrait-up{
+                padding: 5px 10px;
+                font-size: $small-text;
+            }
+            
         }
+        .listButton{
+            border: none;
+        }
+        
         .searchFeild {
             position: relative;
             input{
@@ -36,6 +50,9 @@
                 font-size: $sx-text;
                 line-height: 1.25rem; 
                 background-color: transparent;
+                @include for-tablet-portrait-up{
+                    padding: 7px 0.75rem 7px 2.5rem;
+                }
                 &:focus{
                     outline: none;
                 }
@@ -78,16 +95,29 @@
         ::ng-deep{
             .mat-mdc-tab-label-container{
                 padding: 1.5rem;
+                @include for-tablet-landscape-down{
+                    padding: 15px;
+                }
+                .mat-sort-header-content{
+                    font-size: 13px;
+                }
+                
             }
             .mat-mdc-tab-list{
                 .mat-mdc-tab-labels{
-                    width: 40%;
+                    width: 501px;
                     margin: auto;
                     border-radius: 9999px;
                     border:1px solid $z-teal;
                     overflow: hidden;
                     .mdc-tab__text-label{
                         color: $z-lightgray;
+                        font-size: $sx-text;
+                        line-height: 1.25rem;
+                        
+                        @include for-tablet-landscape-down{
+                            font-size: $small-text;
+                        }
                     }
                     .mdc-tab-indicator--active{
                         background-color: $z-teal;
@@ -101,15 +131,172 @@
                 }
                 
             }
+            .mat-mdc-tab-body-active{
+                // overflow-x: ;
+                overflow-y: unset;
+            }
             .mat-mdc-table{
                 background-color: $z-byzantine;
+                padding-bottom: 55px;
+                .mdc-data-table__content{
+                    .mat-mdc-row{
+                        &:hover{
+                            background-color: #766383ba;
+                        }
+                    }
+                    td{
+                        padding: 1rem;
+                        border-bottom: 1px solid $Z-byzantine-dark3;
+
+                    }
+
+                }
             }
             .mat-mdc-paginator{
-                display: none;
+                background-color: $z-byzantine;
+                position: absolute;
+                bottom: 5px;
+                width: 100%;
+                // min-width: 1523px;
+                .mat-mdc-paginator-page-size-label{
+                    color: $z-lightgray;
+                }
+                .mdc-notched-outline__trailing ,.mdc-notched-outline__leading{
+                    border-color: $z-lightgray;
+                }
+                .mat-mdc-paginator-range-label {
+                    color: $z-lightgray;
+
+                }
+                .mat-mdc-button-touch-target{
+                    color: $z-lightgray;
+
+                }
+                .mat-mdc-tooltip-trigger{
+                    .mat-mdc-paginator-icon{
+                        fill: $z-lightgray;
+                    }
+                }
+                .mat-mdc-select{
+                    .mat-mdc-select-trigger{
+                        color: $z-lightgray;
+                    }
+                    .mat-mdc-select-arrow-wrapper{
+                        .mat-mdc-select-arrow{
+                            color: $z-lightgray;
+                        }
+                    }
+                }
             }
+
             
         }
         
     }
 
+}
+
+
+// }
+
+.allList{
+    width: 51%!important;
+    .head{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    .condtitionButton{
+        position: relative;
+        button{
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 1.25rem;    
+            padding:0.5rem 1.25rem;
+            display: inline-flex;
+            align-items: center;
+            border-radius: 0.5rem;
+            background-color: $z-teal;
+            border: none;
+            color: $z-lightgray;
+            svg{
+                width: 0.625rem;
+                margin-left: 0.75rem;
+                height: 0.625rem;
+            }
+        }
+        .dropdownlist{
+            position: absolute;
+            bottom: 0px;
+            background-color: $z-ocean;
+            padding: 10px;
+            width: 12rem;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            ul{
+                margin: 0;
+                li{
+                    input{
+                        
+                    }
+                }
+            }
+        }
+        
+        
+    }
+    .listingInner{
+    .flexBox{
+        width: 100%;
+        display: flex;
+        gap: 1.5rem;
+        .col{width: 50%;
+            .listingData{
+                background-color:$z-byzantine;
+                .details {
+                    a{
+                        color:$z-lightgray
+                    }
+                    p{
+                        color: $z-lightgray;
+                    }
+                    button{
+                        color: $z-lightgray;
+                    }
+                }
+               
+
+                
+            }
+        }
+    }
+}
+}
+
+.filterModal {
+    display: block;
+    width: 33%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0px;
+    background: $z-lightgray;
+    padding: 1rem;
+    transition: all 0.3s;
+    z-index: 99;
+    transform: translateX(100%);
+    @include for-desktop-down{
+        width: 500px;
+    }
+    // @include for-tablet-portrait-up{
+    //     width: 100%;
+    // }
+    &.show {
+        // right: 0px;
+    transform: translateX(0%);
+
+    }
+    
 }

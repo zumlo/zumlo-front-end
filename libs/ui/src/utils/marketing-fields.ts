@@ -1,9 +1,10 @@
+import { FieldConfig } from "../models/fieldConfig";
 import { reg } from "./regex";
 import { usStatesAndTerritories } from "./us-states";
 import { users } from "./users";
 // Contact-us required fields
 
-export const marketingFields: any = [
+export const marketingFields: FieldConfig[] = [
     {
         name: 'First Name',
         key: 'firstName',
@@ -40,7 +41,6 @@ export const marketingFields: any = [
         type: 'tel',
         fieldRequired: 'Phone number is required.',
         maxMessage: 'Phone number must be of 10 characters.',
-        minLength: '',
         placeholder: 'Phone number',
         mask: '(000) 000-0000',
         validations: { required: true, noWhiteSpace: true, maxlength: 10, minlength: 10 },

@@ -1,0 +1,20 @@
+<div class="reminderCol" [ngStyle]="{'backgroundColor':config.bgColor}">
+  <div class="head" [ngStyle]="{'color':config.textColor}">
+    <strong >{{config.heading}}</strong>
+    <p [ngStyle]="{'color':config.textColor}">{{config.reminder}}
+    </p>
+  </div>
+  <div class="appointmentReminder" [ngStyle]="{'color':config.textColor, 'border-top':config.border, 'backgroundColor':config.bgColor1}">
+    <svg class="flex-shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+      viewBox="0 0 20 20">
+      <path
+        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z">
+      </path>
+    </svg>
+    <p>{{config.description}}</p>
+  </div>
+  <div class="btnblock">
+    <a [ngStyle]="{'color':config.textColor}">{{config.button}}
+      <span class="material-symbols-outlined" >{{config.icon}}</span></a>
+  </div>
+</div>

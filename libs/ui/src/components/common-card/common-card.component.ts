@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonConfig } from '../../models/widegetEmit';
 
@@ -9,14 +9,14 @@ import { ButtonConfig } from '../../models/widegetEmit';
   templateUrl: './common-card.component.html',
   styleUrl: './common-card.component.scss',
 })
-export class CommonCardComponent {
+export class CommonCardComponent implements AfterViewInit{
   @Input() config!: any;
   @Output() changed = new EventEmitter();
   @Output() emitButton = new EventEmitter();
   buttonsConfig!: ButtonConfig
 
   onButtonClick() {
-    this.emitButton.emit(this.buttonsConfig)
+    this.changed.emit(this.buttonsConfig)
   }
 
   ngAfterViewInit() {

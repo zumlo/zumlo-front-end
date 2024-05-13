@@ -33,7 +33,7 @@ export class ZDropdownComponent implements OnInit {
   _initialize() {
     this.control = this.group.controls[this.config.key];
     this.validations = this._validator.getValidations(this.config?.validations || {});
-    this.control.setValidators(this.validations);
+    if(this.validations.length) this.control.setValidators(this.validations);
   }
 
   // Value emit from children to parent component.

@@ -1,0 +1,21 @@
+<div class="seekersList" [ngStyle]="{'backgroundColor':config.bgColor}">
+    <div class="head" [ngStyle]="{'color':config.textColor}">
+        <strong >{{config.heading}}</strong>
+        <p>{{config.total}}</p>
+    </div>
+    <ul>
+        @for (info of config.patientInfo; track $index) {
+        <li>
+            <div class="seekersListinner">
+                <!-- <img src="../../../../assets/images/user-1.jpg" alt="user photo" /> -->
+                <img [src]="info.url" alt="user photo" />
+                <h5><a [ngStyle]="{'color':config.textColor}">{{info.seekerName}}</a></h5>
+            </div>
+            <a [ngStyle]="{'color':config.textColor}">{{info.clinicianName}}</a>
+        </li>
+    }
+    </ul>
+    <div class="view-all"  [ngStyle]="{'color':config.textColor}">
+        <a>{{config.button}}</a>
+    </div>
+</div>

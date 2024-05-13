@@ -1,3 +1,41 @@
-<div>
-    {{config.heading}}
+<div class="tredingAssesments" [ngStyle]="{'border':config.borderColor, 'backgroundColor':config.bgColor}">
+    <div class="tredingAssesmentsheading">
+        <strong [ngStyle]="{'color':config.headingColor}">{{config.heading}}</strong>
+        @if(config.type == "outerCardAll"){
+            <form [formGroup]="form">
+                <ng-container zDynamicField [group]="form" [config]="configs" (valueChanged)="valueChanged($event)"></ng-container>
+            </form>
+        }
+        @if(config.type == "pendinginvitesOuter"){
+            <a [ngStyle]="{'color':config.color}">{{config.button}}</a>
+        }
+        @if(config.type == "trendingAssessment"){
+            <span class="material-symbols-outlined rightArrow">{{config.icon}}</span>
+        }
+        <div class="listGridOuter">
+        @for (config of config.innerComponent; track $index) {
+            @if(config.type == "commonInnerCard"){
+        <z-common-inner-trending-card [config]="config"></z-common-inner-trending-card>
+            }
+            @else if(config.type == "donutChart"){
+        <z-z-donut-chart [config]="config"></z-z-donut-chart>
+            }
+            @else if(config.type == "pieChart"){
+        <z-pie-chart [config]="config"></z-pie-chart>
+            }
+            @else if(config.type == "gridCommonCard"){
+        <z-grid-common-card [config]="config"></z-grid-common-card>
+            }
+            @else if(config.type == "commonCarousel") {
+                <z-common-carousel  [config]="config.card"></z-common-carousel>
+            }
+            @else if(config.type == "carousel") {
+                <z-carousel-3d  [config]="config.carousel"></z-carousel-3d>
+            }
+            @else {
+                <z-pending-invites-card [config]="config"></z-pending-invites-card>
+            }
+        }
+    </div>
+    </div>
 </div>

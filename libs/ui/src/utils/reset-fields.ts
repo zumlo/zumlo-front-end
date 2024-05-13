@@ -7,7 +7,14 @@ export const resetFields: any = [
         type: 'password',
         fieldRequired: 'Password is required.',
         placeholder: 'Enter your password',
-        patternMessage: 'Valid :- 8+ chars, mix: upper, lower, num, special.',
+        patternMessageTwo: {
+            uppercase: 'Uppercase character is required.',
+            lowercase: 'Lowercase character is required.',
+            number: 'Number is required.',
+            specialCharacter: 'Special character is required.',
+            Min: 'min 8+ characters'
+        },
+        value: '',
         icons: 'lock',
         validations: { required: true, noWhiteSpace: true, maxlength: 100, pattern: reg.password }
     },
@@ -18,6 +25,7 @@ export const resetFields: any = [
         fieldRequired: 'Confirm password is required.',
         placeholder: 'Re-Enter your password',
         notMatch: 'Passwords do not match.',
+        value: '',
         icons: 'lock',
         validations: { required: true, noWhiteSpace: true, maxlength: 100}
     },

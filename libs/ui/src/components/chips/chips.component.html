@@ -1,0 +1,30 @@
+<mat-form-field class="example-chip-list">
+    <mat-label>{{config.name}}</mat-label>
+    <mat-chip-grid #chipGrid aria-label="Enter plan">
+        <div class="chipOtr">
+            @for (plans of plan; track plans) {
+              <mat-chip-row
+                (removed)="remove(plans)"
+                [editable]="true"
+                (edited)="edit(plans, $event)"
+                [aria-description]="'press enter to edit ' + plans.name">
+                {{plans.name}}
+                <button matChipRemove [attr.aria-label]="'remove ' + plans.name">
+                  <mat-icon>cancel</mat-icon>
+                </button>
+              </mat-chip-row>
+            }
+        </div>
+      <input [placeholder]="config.placeholder"
+             [matChipInputFor]="chipGrid"
+             [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+             [matChipInputAddOnBlur]="addOnBlur"
+             (matChipInputTokenEnd)="add($event)"
+             [formControl]="control"/>
+    </mat-chip-grid>
+    <div *ngIf="!control?.valid && (control?.touched || control?.dirty)"
+    class="error-message text-xs text-[#ff9d48] absolute  left-0 right-0 ">
+    {{ errorMessage }}
+</div>
+  </mat-form-field>
+  

@@ -1,0 +1,69 @@
+<div class="anxietyList">
+  <div class="listingInner">
+    <div class="listingData" [ngStyle]="{ backgroundColor: config.bgColor }">
+      <div class="profile">
+        <div class="profileInner">
+          <img [src]="config.seekerProfile" alt="user photo" />
+          <div class="details">
+            <a
+              href="javascript:void(0)"
+              [ngStyle]="{ color: config.headingColor }"
+              >{{ config.seekerName }}</a
+            >
+            <p [ngStyle]="{ color: config.textColor }">
+              {{ config.seekerEmail }}
+            </p>
+          </div>
+        </div>
+        <div class="veiw">
+          @for (config of config.innerMenu; track $index) {
+          <z-mat-menu [config]="config"></z-mat-menu>
+          }
+        </div>
+      </div>
+      <div class="infomation">
+        <ul>
+          <li
+            [ngStyle]="{
+              color: config.textColor1,
+              backgroundColor: config.bgColor1,
+              border: config.border
+            }"
+          >
+            {{ config.healthIssue }}
+          </li>
+          <li
+            [ngStyle]="{
+              color: config.textColor2,
+              backgroundColor: config.bgColor2,
+              border: config.border1
+            }"
+          >
+            {{ config.status }}
+          </li>
+        </ul>
+        <p [ngStyle]="{ color: config.textColor }">
+          {{ config.description }}
+        </p>
+        <ul class="lifeStyle">
+          <li
+            [ngStyle]="{
+              color: config.textColor3,
+              backgroundColor: config.bgColor3
+            }"
+          >
+            {{ config.wellnessPlan }}
+          </li>
+          <li
+            [ngStyle]="{
+              color: config.textColor3,
+              backgroundColor: config.bgColor4
+            }"
+          >
+            {{ config.form }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

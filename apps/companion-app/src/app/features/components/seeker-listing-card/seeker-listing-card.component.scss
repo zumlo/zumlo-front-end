@@ -1,0 +1,297 @@
+// @import "../../../../assets/styles/color-variables"; 
+// @import "../../../../assets/styles/typography"; 
+
+
+// .seekerListing{
+//     width: 100%;
+//     .heading{
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//     }
+//     .filterData{
+//         display: flex;
+//         align-items: center;
+//         gap: 1rem;
+//         button{
+//             display: flex; 
+//             align-items: center;
+//             padding: 0.625rem 0.75rem;
+//             gap: 0.5rem;
+//             border-radius: 0.5rem; 
+//             border: 1px solid $z-orange-color;
+//             background-color: transparent;
+//             color: $z-lightgray;
+//             cursor: pointer;
+//             font-size: $sx-text;
+//             line-height: 1.25rem; 
+//         }
+//         .searchFeild {
+//             position: relative;
+//             input{
+//                 padding: 0.625rem 0.75rem 0.625rem 2.5rem;
+//                 border-radius: 0.5rem; 
+//                 border: 1px solid $z-orange-color;
+//                 color: $z-lightgray;
+//                 font-size: $sx-text;
+//                 line-height: 1.25rem; 
+//                 background-color: transparent;
+//                 &:focus{
+//                     outline: none;
+//                 }
+//             }
+//             .searchIcon{
+//                 position: absolute;
+//                 content: "";
+//                 width: 1rem;
+//                 height: 1rem;
+//                 top: 0;
+//                 bottom: 0;
+//                 margin: auto;
+//                 left: 15px;
+//                 color: $z-orange-color;
+//             }
+//         }
+//         .listView{
+//             span{
+//                 border-radius: 9999px; 
+//                 width: 3rem; 
+//                 height: 3rem; 
+//                 font-size: $main-caption;
+//                 line-height: 2.25rem; 
+//                 cursor: pointer; 
+//                 color: $z-lightgray;
+//                 display: flex;
+//                 justify-content: center;
+//                 align-items: center;
+
+//                 &:hover{
+//                     background-color: $z-teal;
+//                 }
+//             }
+//         }
+//     }
+//     .list-data{
+//         width: 100%;
+//         border-radius: 0.5rem;
+//         background-color: $z-byzantine;
+//         ::ng-deep{
+//             .mat-mdc-tab-label-container{
+//                 padding: 1.5rem;
+//             }
+//             .mat-mdc-tab-list{
+//                 .mat-mdc-tab-labels{
+//                     width: 501px;
+//                     margin: auto;
+//                     border-radius: 9999px;
+//                     border:1px solid $z-teal;
+//                     overflow: hidden;
+//                     .mdc-tab__text-label{
+//                         color: $z-lightgray;
+//                         font-size: $sx-text;
+//                         line-height: 1.25rem;
+//                     }
+//                     .mdc-tab-indicator--active{
+//                         background-color: $z-teal;
+//                         border-radius: 9999px;
+                       
+//                     }
+                    
+//                 }
+//                 .mdc-tab-indicator__content--underline{
+//                     display: none;
+//                 }
+                
+//             }
+//             .mat-mdc-table{
+//                 background-color: $z-byzantine;
+//             }
+            
+            
+//         }
+        
+//     }
+
+// }
+
+// .seekerListing{
+//     width: 100%;
+//     .listing{
+//         width: 100%;
+//         .cs-row{
+//             display: flex;
+//             flex-wrap: wrap;
+//             gap: 2rem;
+//             .anxietyList{
+//                 .head{
+//                     margin: 0;
+//                     width: 100%;
+//                     h4{
+//                         margin: 0;
+//                         font-size: $lg-text;
+//                         line-height: 1.75rem;
+//                         font-weight: 600;
+//                         margin-bottom: 2rem;
+
+//                     }
+//                 }
+                
+//             }
+//             .depresssion{
+//                 .listingData{
+//                     background-color:$z-lightgray;
+//                     .profile{
+//                     .profileInner{
+//                     .details {
+//                         a{
+//                             color: $z-ocean;
+//                         }
+//                         p{
+//                             color: $z-byzantine-lite-2;
+//                         }
+//                     }
+//                             }
+//                             button{
+//                                 color: $z-teal!important;
+//                             }
+//                     }
+//                     .infomation{
+//                         ul{
+//                             li{
+//                                 &:nth-child(1){
+//                                     background-color: $z-teal;
+//                                     border-color: $z-teal;
+//                                     color: $z-lightgray;
+//                                 }
+//                                 &:nth-child(2){
+//                                     background-color:$z-orange-color;
+//                                     border-color: $z-orange-color;
+//                                     color: $z-ocean;
+//                                 }
+//                             }
+//                         }
+//                         p{
+//                             color:$z-byzantine-lite-2;
+//                         }
+//                         .lifeStyle {
+//                             li{
+//                                 &:nth-child(2){
+//                                     background-color: $z-teal;
+//                                     border-color: $z-teal;
+//                                     color: $z-lightgray;
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+// }
+
+// .allList{
+//     width: 51%!important;
+//     .head{
+//         display: flex;
+//         justify-content: space-between;
+        
+//     }
+//     .condtitionButton{
+//         position: relative;
+//         button{
+//             font-weight: 500;
+//             font-size: 0.875rem;
+//             line-height: 1.25rem;    
+//             padding:0.5rem 1.25rem;
+//             display: inline-flex;
+//             align-items: center;
+//             border-radius: 0.5rem;
+//             background-color: $z-teal;
+//             border: none;
+//             color: $z-lightgray;
+//             svg{
+//                 width: 0.625rem;
+//                 margin-left: 0.75rem;
+//                 height: 0.625rem;
+//             }
+//         }
+//         .dropdownlist{
+//             position: absolute;
+//             bottom: 0px;
+//             background-color: $z-ocean;
+//             padding: 10px;
+//             width: 12rem;
+//             font-size: 0.875rem;
+//             line-height: 1.25rem;
+//             padding: 0.75rem;
+//             border-radius: 0.5rem;
+//             ul{
+//                 margin: 0;
+//                 li{
+//                     input{
+                        
+//                     }
+//                 }
+//             }
+//         }
+        
+        
+//     }
+//     .listingInner{
+//     .flexBox{
+//         width: 100%;
+//         display: flex;
+//         gap: 1.5rem;
+//         .col{width: 50%;
+//             .listingData{
+//                 background-color:$z-byzantine;
+//                 .details {
+//                     a{
+//                         color:$z-lightgray
+//                     }
+//                     p{
+//                         color: $z-lightgray;
+//                     }
+//                     button{
+//                         color: $z-lightgray;
+//                     }
+//                 }
+//                 .infomation{
+//                     ul{
+//                         li{
+//                             &:nth-child(1){
+//                                 color: $z-ocean;
+//                                 border-color: $z-lightgray;
+//                                 background-color: $z-lightgray;
+//                             }
+//                             &:nth-child(2){
+//                                 color: $z-ocean;
+//                                 border-color: $z-orange-color;
+//                                 background-color: $z-orange-color;
+//                             }
+                            
+//                         }
+//                     }
+//                     .lifeStyle{
+//                         li{
+//                             &:nth-child(2){
+//                                 background-color: $z-teal!important;
+//                                 border-color: $z-teal;
+//                                 color: $z-lightgray;
+//                             }
+//                         }
+//                     }
+//                 }
+
+                
+//             }
+//         }
+//     }
+// }
+// }
+
+
+
+
+// 

@@ -1,2 +1,15 @@
+<div [ngStyle]="{'backgroundColor': config.bgColor}">
+<div class="seekrsInfo">
+    <div class="onboardSeekers">
+        <h5 [ngStyle]="{'color': config.textColor}">{{config.onboardedSeeker}}</h5>
+        <p [ngStyle]="{'color': config.textColor}">{{config.heading}}</p>
+    </div>
+    <div class="seekerPercent">
+        <p [ngStyle]="{'color': config.textColor1}">{{config.onboardPercantage}}</p>
+        <svg [ngStyle]="{'color': config.textColor1}" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14" class="w-3 h-3 ms-1"><path  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13V1m0 0L1 5m4-4 4 4"></path>
+    </svg>
+    </div>
+</div>
 <apx-chart [series]="config.chartOptions.series" [chart]="config.chartOptions.chart" [title]="config.chartOptions.title" [xaxis]="config.chartOptions.xaxis" [grid]="config.chartOptions.grid" [fill]="config.chartOptions.fill" [yaxis]="config.chartOptions.yaxis" [dataLabels]="config.chartOptions.dataLabels">
 </apx-chart>
+</div>

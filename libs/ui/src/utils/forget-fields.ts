@@ -1,6 +1,8 @@
+import { FieldConfig } from "../models/fieldConfig";
+import { ForgotFieldsConfig } from "../models/forgetFields";
 import { reg } from "./regex";
 
-export const forgetFields: any = [
+export const forgetFields:FieldConfig[] = [
     {
         name: 'Email',
         key: 'email',

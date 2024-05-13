@@ -11,7 +11,7 @@ const routes: Routes = [
   {
     path: '',
     component: FeatureWrapperComponent,
-    canActivate: [authGuard],
+    // canActivate: [authGuard],
     children: [
       {
         path: 'super-admin',

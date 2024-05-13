@@ -1,6 +1,6 @@
 // US states
 
-export const usStatesAndTerritories = [
+export const usStatesAndTerritories:{key:string, value:string}[] = [
     { key: 'AL', value: 'Alabama' },
     { key: 'AK', value: 'Alaska' },
     { key: 'AZ', value: 'Arizona' },

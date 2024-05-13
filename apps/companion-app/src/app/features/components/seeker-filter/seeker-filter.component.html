@@ -1,0 +1,31 @@
+<div class="SideNavigation">
+  <button class="closeButton" type="button" mat-button (click)="close()">
+    <span class="material-symbols-outlined">
+      close
+      </span>
+  </button>
+  <span class="heading">
+    <span class="material-symbols-outlined">
+      filter_alt
+      </span> Filter
+  </span>
+  <div class="">
+    <div class="invitOn">Invited On</div>
+    <form [formGroup]="form">
+      <div class="loginForm">
+        @for (config of configs; track $index) {
+          <div class="formFeild formFeild-{{$index + 1}}">
+            <label>{{config?.label}}</label>
+            <ng-container zDynamicField [group]="form" [config]="config" (valueChanged)="valueChanged($event)"></ng-container>
+          </div>
+        }
+      </div>
+      <z-simple-button (buttonClick)="applyFilter()" 
+      class="">Apply</z-simple-button>
+      <z-simple-button (buttonClick)="clearFilter()" 
+      class="">Clear</z-simple-button>
+    </form>
+  </div>
+</div>
+
+

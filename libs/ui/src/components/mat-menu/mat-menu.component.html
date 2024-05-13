@@ -1,0 +1,7 @@
+    <button mat-button [matMenuTriggerFor]="menu">
+      <span class="material-symbols-outlined">{{config.icon}}</span>
+  </button>
+    <mat-menu #menu="matMenu" class="viewDropdown">
+      <button mat-menu-item>{{config.button1}}</button>
+      <button mat-menu-item>{{config.button2}}</button>
+    </mat-menu>

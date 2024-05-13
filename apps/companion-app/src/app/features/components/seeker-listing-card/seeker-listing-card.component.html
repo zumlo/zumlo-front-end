@@ -1,0 +1,508 @@
+ <div class="seekerListing">
+        <div class="listing">
+          <div class="cs-row">
+             <div class="anxietyList"> 
+             <div class="listingInner">
+                @for (sectionArr of seekerGrid; track $index) {
+                  <div class="z-seeker-grid-dashboard-col-{{$index + 1}}">
+                  
+                  @for (config of sectionArr; track $index) {
+                    <ng-container zDynamicComponent [config]="config"></ng-container>  
+                  }
+                </div>
+                }
+                <!-- <div class="listingData">
+                  <div class="profile">
+                    <div class="profileInner">
+                      <img
+                        src="../../../../assets/images/user-1-info.jpg"
+                        alt="user photo"
+                      />
+                      <div class="details">
+                        <a href="javascript:void(0)">Jennie Collen</a>
+                        <p>jenniecollen&#64;gmail.com</p>
+                      </div>
+                    </div>
+                    <div class="veiw">
+                        <button mat-button [matMenuTriggerFor]="menu">
+                          <span class="material-symbols-outlined">more_vert</span>
+                      </button>
+                        <mat-menu #menu="matMenu" class="viewDropdown">
+                          <button mat-menu-item>View</button>
+                          <button mat-menu-item>Delete</button>
+                        </mat-menu>
+                    </div>
+                  </div>
+                  <div class="infomation">
+                    <ul>
+                      <li>Anxiety</li>
+                      <li>Active</li>
+                    </ul>
+                    <p>
+                      Jennie Collen is the person who is suffering from the
+                      anxiety problems. . .
+                    </p>
+                    <ul class="lifeStyle">
+                      <li>Lifestyle Changes</li>
+                      <li>Medical History Form</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="listingData">
+                  <div class="profile">
+                    <div class="profileInner">
+                      <img
+                        src="../../../../assets/images/user-1-info.jpg"
+                        alt="user photo"
+                      />
+                      <div class="details">
+                        <a href="javascript:void(0)">Jennie Collen</a>
+                        <p>jenniecollen&#64;gmail.com</p>
+                      </div>
+                    </div>
+                    <div class="veiw">
+                      <button mat-button [matMenuTriggerFor]="menu">
+                        <span class="material-symbols-outlined">more_vert</span>
+                    </button>
+                      <mat-menu #menu="matMenu" class="viewDropdown">
+                        <button mat-menu-item>View</button>
+                        <button mat-menu-item>Delete</button>
+                      </mat-menu>
+                    </div>
+                  </div>
+                  <div class="infomation">
+                    <ul>
+                      <li>Anxiety</li>
+                      <li>Active</li>
+                    </ul>
+                    <p>
+                      Jennie Collen is the person who is suffering from the
+                      anxiety problems. . .
+                    </p>
+                    <ul class="lifeStyle">
+                      <li>Lifestyle Changes</li>
+                      <li>Medical History Form</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="listingData">
+                  <div class="profile">
+                    <div class="profileInner">
+                      <img
+                        src="../../../../assets/images/user-1-info.jpg"
+                        alt="user photo"
+                      />
+                      <div class="details">
+                        <a href="javascript:void(0)">Jennie Collen</a>
+                        <p>jenniecollen&#64;gmail.com</p>
+                      </div>
+                    </div>
+                    <div class="veiw">
+                      <button mat-button [matMenuTriggerFor]="menu">
+                        <span class="material-symbols-outlined">more_vert</span>
+                    </button>
+                      <mat-menu #menu="matMenu" class="viewDropdown">
+                        <button mat-menu-item>View</button>
+                        <button mat-menu-item>Delete</button>
+                      </mat-menu>
+                    </div>
+                  </div>
+                  <div class="infomation">
+                    <ul>
+                      <li>Anxiety</li>
+                      <li>Active</li>
+                    </ul>
+                    <p>
+                      Jennie Collen is the person who is suffering from the
+                      anxiety problems. . .
+                    </p>
+                    <ul class="lifeStyle">
+                      <li>Lifestyle Changes</li>
+                      <li>Medical History Form</li>
+                    </ul>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+            <!-- <div class="anxietyList depresssion">
+              <div class="listingInner">
+                <div class="head">
+                  <h4>Depression</h4>
+                </div>
+                <div class="listingData">
+                  <div class="profile">
+                    <div class="profileInner">
+                      <img
+                        src="../../../../assets/images/user-1-info.jpg"
+                        alt="user photo"
+                      />
+                      <div class="details">
+                        <a href="javascript:void(0)">Jennie Collen</a>
+                        <p>jenniecollen&#64;gmail.com</p>
+                      </div>
+                    </div>
+                    <div class="veiw">
+                      <button mat-button [matMenuTriggerFor]="menu">
+                        <span class="material-symbols-outlined">more_vert</span>
+                    </button>
+                      <mat-menu #menu="matMenu" class="viewDropdown">
+                        <button mat-menu-item>View</button>
+                        <button mat-menu-item>Delete</button>
+                      </mat-menu>
+                    </div>
+                  </div>
+                  <div class="infomation">
+                    <ul>
+                      <li>Anxiety</li>
+                      <li>Active</li>
+                    </ul>
+                    <p>
+                      Jennie Collen is the person who is suffering from the
+                      anxiety problems. . .
+                    </p>
+                    <ul class="lifeStyle">
+                      <li>Lifestyle Changes</li>
+                      <li>Medical History Form</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="listingData">
+                  <div class="profile">
+                    <div class="profileInner">
+                      <img
+                        src="../../../../assets/images/user-1-info.jpg"
+                        alt="user photo"
+                      />
+                      <div class="details">
+                        <a href="javascript:void(0)">Jennie Collen</a>
+                        <p>jenniecollen&#64;gmail.com</p>
+                      </div>
+                    </div>
+                    <div class="veiw">
+                      <button mat-button [matMenuTriggerFor]="menu">
+                        <span class="material-symbols-outlined">more_vert</span>
+                    </button>
+                      <mat-menu #menu="matMenu" class="viewDropdown">
+                        <button mat-menu-item>View</button>
+                        <button mat-menu-item>Delete</button>
+                      </mat-menu>
+                    </div>
+                   
+                  </div>
+                  <div class="infomation">
+                    <ul>
+                      <li>Anxiety</li>
+                      <li>Active</li>
+                    </ul>
+                    <p>
+                      Jennie Collen is the person who is suffering from the
+                      anxiety problems. . .
+                    </p>
+                    <ul class="lifeStyle">
+                      <li>Lifestyle Changes</li>
+                      <li>Medical History Form</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="listingData">
+                  <div class="profile">
+                    <div class="profileInner">
+                      <img
+                        src="../../../../assets/images/user-1-info.jpg"
+                        alt="user photo"
+                      />
+                      <div class="details">
+                        <a href="javascript:void(0)">Jennie Collen</a>
+                        <p>jenniecollen&#64;gmail.com</p>
+                      </div>
+                    </div>
+                    <div class="veiw">
+                      <button mat-button [matMenuTriggerFor]="menu">
+                        <span class="material-symbols-outlined">more_vert</span>
+                    </button>
+                      <mat-menu #menu="matMenu" class="viewDropdown">
+                        <button mat-menu-item>View</button>
+                        <button mat-menu-item>Delete</button>
+                      </mat-menu>
+                    </div>
+                  </div>
+                  <div class="infomation">
+                    <ul>
+                      <li>Anxiety</li>
+                      <li>Active</li>
+                    </ul>
+                    <p>
+                      Jennie Collen is the person who is suffering from the
+                      anxiety problems. . .
+                    </p>
+                    <ul class="lifeStyle">
+                      <li>Lifestyle Changes</li>
+                      <li>Medical History Form</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="anxietyList allList">
+              <div class="listingInner">
+                <div class="head">
+                  <h4>All</h4>
+                  <div class="condtitionButton">
+                    <button>
+                      Conditions
+                      <svg
+                        class="w-2.5 h-2.5 ms-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="m1 1 4 4 4-4"
+                        ></path>
+                      </svg>
+                    </button>
+                    @if(configs) {
+                      <form [formGroup]="form">
+                          <ng-container zDynamicField [group]="form" [config]="configs" (valueChanged)="valueChanged($event)"></ng-container>
+                      </form>
+                    }
+                  </div>
+                </div>
+                <div class="flexBox">
+                <div class="col">
+                  <div class="listingData">
+                    <div class="profile">
+                      <div class="profileInner">
+                        <img
+                          src="../../../../assets/images/user-1-info.jpg"
+                          alt="user photo"
+                        />
+                        <div class="details">
+                          <a href="javascript:void(0)">Jennie Collen</a>
+                          <p>jenniecollen&#64;gmail.com</p>
+                        </div>
+                      </div>
+                      <div class="veiw">
+                        <button mat-button [matMenuTriggerFor]="menu">
+                          <span class="material-symbols-outlined">more_vert</span>
+                      </button>
+                        <mat-menu #menu="matMenu" class="viewDropdown">
+                          <button mat-menu-item>View</button>
+                          <button mat-menu-item>Delete</button>
+                        </mat-menu>
+                    </div>
+                    </div>
+                    <div class="infomation">
+                      <ul>
+                        <li>Anxiety</li>
+                        <li>Active</li>
+                      </ul>
+                      <p>
+                        Jennie Collen is the person who is suffering from the
+                        anxiety problems. . .
+                      </p>
+                      <ul class="lifeStyle">
+                        <li>Lifestyle Changes</li>
+                        <li>Medical History Form</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="listingData">
+                    <div class="profile">
+                      <div class="profileInner">
+                        <img
+                          src="../../../../assets/images/user-1-info.jpg"
+                          alt="user photo"
+                        />
+                        <div class="details">
+                          <a href="javascript:void(0)">Jennie Collen</a>
+                          <p>jenniecollen&#64;gmail.com</p>
+                        </div>
+                      </div>
+                      <div class="veiw">
+                        <button mat-button [matMenuTriggerFor]="menu">
+                          <span class="material-symbols-outlined">more_vert</span>
+                      </button>
+                        <mat-menu #menu="matMenu" class="viewDropdown">
+                          <button mat-menu-item>View</button>
+                          <button mat-menu-item>Delete</button>
+                        </mat-menu>
+                    </div>
+                    </div>
+                    <div class="infomation">
+                      <ul>
+                        <li>Anxiety</li>
+                        <li>Active</li>
+                      </ul>
+                      <p>
+                        Jennie Collen is the person who is suffering from the
+                        anxiety problems. . .
+                      </p>
+                      <ul class="lifeStyle">
+                        <li>Lifestyle Changes</li>
+                        <li>Medical History Form</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="listingData">
+                    <div class="profile">
+                      <div class="profileInner">
+                        <img
+                          src="../../../../assets/images/user-1-info.jpg"
+                          alt="user photo"
+                        />
+                        <div class="details">
+                          <a href="javascript:void(0)">Jennie Collen</a>
+                          <p>jenniecollen&#64;gmail.com</p>
+                        </div>
+                      </div>
+                      <div class="veiw">
+                        <button mat-button [matMenuTriggerFor]="menu">
+                          <span class="material-symbols-outlined">more_vert</span>
+                      </button>
+                        <mat-menu #menu="matMenu" class="viewDropdown">
+                          <button mat-menu-item>View</button>
+                          <button mat-menu-item>Delete</button>
+                        </mat-menu>
+                    </div>
+                    </div>
+                    <div class="infomation">
+                      <ul>
+                        <li>Anxiety</li>
+                        <li>Active</li>
+                      </ul>
+                      <p>
+                        Jennie Collen is the person who is suffering from the
+                        anxiety problems. . .
+                      </p>
+                      <ul class="lifeStyle">
+                        <li>Lifestyle Changes</li>
+                        <li>Medical History Form</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col"> 
+                  <div class="listingData">
+                    <div class="profile">
+                      <div class="profileInner">
+                        <img
+                          src="../../../../assets/images/user-1-info.jpg"
+                          alt="user photo"
+                        />
+                        <div class="details">
+                          <a href="javascript:void(0)">Jennie Collen</a>
+                          <p>jenniecollen&#64;gmail.com</p>
+                        </div>
+                      </div>
+                      <div class="veiw">
+                        <button mat-button [matMenuTriggerFor]="menu">
+                          <span class="material-symbols-outlined">more_vert</span>
+                      </button>
+                        <mat-menu #menu="matMenu" class="viewDropdown">
+                          <button mat-menu-item>View</button>
+                          <button mat-menu-item>Delete</button>
+                        </mat-menu>
+                    </div>
+                    </div>
+                    <div class="infomation">
+                      <ul>
+                        <li>Anxiety</li>
+                        <li>Active</li>
+                      </ul>
+                      <p>
+                        Jennie Collen is the person who is suffering from the
+                        anxiety problems. . .
+                      </p>
+                      <ul class="lifeStyle">
+                        <li>Lifestyle Changes</li>
+                        <li>Medical History Form</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="listingData">
+                    <div class="profile">
+                      <div class="profileInner">
+                        <img
+                          src="../../../../assets/images/user-1-info.jpg"
+                          alt="user photo"
+                        />
+                        <div class="details">
+                          <a href="javascript:void(0)">Jennie Collen</a>
+                          <p>jenniecollen&#64;gmail.com</p>
+                        </div>
+                      </div>
+                      <div class="veiw">
+                        <button mat-button [matMenuTriggerFor]="menu">
+                          <span class="material-symbols-outlined">more_vert</span>
+                      </button>
+                        <mat-menu #menu="matMenu" class="viewDropdown">
+                          <button mat-menu-item>View</button>
+                          <button mat-menu-item>Delete</button>
+                        </mat-menu>
+                      </div>
+                    </div>
+                    <div class="infomation">
+                      <ul>
+                        <li>Anxiety</li>
+                        <li>Active</li>
+                      </ul>
+                      <p>
+                        Jennie Collen is the person who is suffering from the
+                        anxiety problems. . .
+                      </p>
+                      <ul class="lifeStyle">
+                        <li>Lifestyle Changes</li>
+                        <li>Medical History Form</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="listingData">
+                    <div class="profile">
+                      <div class="profileInner">
+                        <img
+                          src="../../../../assets/images/user-1-info.jpg"
+                          alt="user photo"
+                        />
+                        <div class="details">
+                          <a href="javascript:void(0)">Jennie Collen</a>
+                          <p>jenniecollen&#64;gmail.com</p>
+                        </div>
+                      </div>
+                      <div class="veiw">
+                        <button mat-button [matMenuTriggerFor]="menu">
+                          <span class="material-symbols-outlined">more_vert</span>
+                      </button>
+                        <mat-menu #menu="matMenu" class="viewDropdown">
+                          <button mat-menu-item>View</button>
+                          <button mat-menu-item>Delete</button>
+                        </mat-menu>
+                      </div>
+                    </div>
+                    <div class="infomation">
+                      <ul>
+                        <li>Anxiety</li>
+                        <li>Active</li>
+                      </ul>
+                      <p>
+                        Jennie Collen is the person who is suffering from the
+                        anxiety problems. . .
+                      </p>
+                      <ul class="lifeStyle">
+                        <li>Lifestyle Changes</li>
+                        <li>Medical History Form</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div> -->
+          </div>
+         </div> 
+       </div> 

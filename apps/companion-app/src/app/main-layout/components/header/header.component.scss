@@ -7,9 +7,7 @@
     width: 100%;
     background-color: $z-byzantine-lite-2;
     border-bottom: 1px solid $z-orange-color;
-    // position: fixed;
-    // top: 0;
-    // z-index: 999;
+    
     .headerInner{
         width: 100%;
         .headerInnercol{
@@ -118,9 +116,15 @@
             text-align: left;
             
             p{
-                font-weight: 600;
-                line-height: 1.25rem;
                 color: $z-lightgray;
+                &:nth-child(1){
+                    font-size: $sx-text;
+                    line-height: 1.25rem; 
+                    font-weight: 600; 
+                    
+                }
+                // font-weight: 600;
+                line-height: 1.25rem;
                 font-size: $small-text;
                 margin: 0;
                 padding-left: 0.75rem;

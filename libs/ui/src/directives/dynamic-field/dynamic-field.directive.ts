@@ -9,6 +9,8 @@ import { ZDialogComponent } from '../../components/z-dialog/z-dialog.component';
 import { ZPasswordComponent } from '../../components/z-password/z-password.component';
 import { ZInputNumberComponent } from '../../components/z-input-number/z-input-number.component';
 import { DynamicFieldType } from '../../models/dynamicField';
+import { ZDateComponent } from '../../components/z-date/z-date.component';
+import { ChipsComponent } from '../../components/chips/chips.component';
 
 // dynamically fields as according to key.
 const DYNAMIC_FIELDS: { [type: string]: Type<DynamicFieldType> } = {
@@ -19,7 +21,12 @@ const DYNAMIC_FIELDS: { [type: string]: Type<DynamicFieldType> } = {
   'tel': ZInputMaskComponent,
   'email': ZInputTextComponent,
   'password': ZPasswordComponent,
-  'number': ZInputNumberComponent
+  'number': ZInputNumberComponent,
+  'daterange': ZDateComponent,
+  'wellnessPlanChips':ChipsComponent,
+  'assessmentPlanChips':ChipsComponent,
+  'conditions':ZDropdownComponent,
+  'chips':ChipsComponent,
 }
 
 @Directive({
@@ -49,7 +56,7 @@ export class DynamicFieldDirective implements OnChanges, OnInit {
   // create component dynamically.
   private _createComponent(): void {
     this.component = this.componentCreator.createComponent(DYNAMIC_FIELDS[this.config.type]);
-    this.component.location.nativeElement.classList.add(`z-form-control`);
+    this.component.location.nativeElement.classList.add(this.config.class ? this.config.class : `z-form-control`);
     this._initializeComponent();
   }
 

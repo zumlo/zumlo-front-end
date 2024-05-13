@@ -1,364 +1,221 @@
-@import '../../../../assets/styles/color-variables';
-@import '../../../../assets/styles/typography';
-@import '../../../../assets/styles/mixin';
-@import '../../../../assets/styles/common-file/dashboards.scss';
+// @import '../../../../assets/styles/color-variables';
+// @import '../../../../assets/styles/typography';
+// @import '../../../../assets/styles/mixin';
+// @import '../../../../assets/styles/common-file/dashboards.scss';
 
 
-.dasbaordInner {
-  .heading {
-    h1 {
-      margin: 0;
-      font-weight: 700;
-      font-size: $main-caption;
-      line-height: 2.25rem;
-      color: $z-lightgray;
-    }
-  }
+// .dasbaordInner {
+//   .heading {
+//     h1 {
+//       margin: 0;
+//       font-weight: 700;
+//       font-size: $main-caption;
+//       line-height: 2.25rem;
+//       color: $z-lightgray;
+//     }
+//   }
+// }
+// .superAdmindasboard{
+//   @include  for-desktop-down{
+//     flex-direction: column;
+//   }
+//   @include for-laptop-view-down{
+//     flex-wrap: wrap;
+//   }
+//   .rightCol{
+//     width: 100%;
+//     gap: 2rem;
+//     @include for-laptop-view-down{
+//       gap: 1rem;
 
-//   Organizationslists
-.orginzationOuter{
-  padding: 1rem; 
-  margin-top: 1.5rem; 
-  border-radius: 1rem; 
-  border-width: 1px; 
-  border:1px solid  #4ea692;
-.head{
-  margin-bottom: 1.75rem;
-  p{
-    font-weight: 600;
-    font-size: $small-text;
-    line-height: 1rem;
-  }
-}
-.Organizationslists{
-    width: 100%;
-    display: flex;
-    padding-left: 0px;
-    flex-wrap: wrap;
-    margin: 0;
-    li{
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding:  0.75rem 0px;
-      &:nth-child(1){
-        padding-top: 0px;
-      }
-      .userinfo{
-        h5{
-          margin: 0px;
-          line-height: unset;
-          a {
-            text-decoration: none;
-            font-size: $md-text;
-            line-height: 1.75rem; 
-            font-weight: 600; 
-            line-height: 1; 
-            color:$z-lightgray;
-            @include for-laptop-view-down{
-              font-size: $sm-text;
-            }
-            &:hover{
-              color: $z-orange-color;
-            }
-
-          }
-          
-        }
-        span{
-          font-size: 0.75rem;
-          line-height: 1rem; 
-          font-weight: 600; 
-          color: $z-lightgray;
-        }
-      }
-      .patientalloted {
-        font-size: 0.75rem;
-        line-height: 1rem; 
-        font-weight: 600; 
-        color: $z-lightgray;
+//       }
     
-      }
+//     @include for-desktop-down{
+//       width: 100%;
+//       gap: 1rem;
+//     }
+//   }
+//   .leftCol{
+//     width: 33%;
+    
+//     @include for-desktop-down{
+//       width: 100%;
+//       margin-top: 1rem;
+//       gap: 1rem;
+//       display: flex;
+//       flex-wrap: wrap;
+//     }
+//   }
   
-    }
-}
-}
-}
+// }
+// .superAdminWellness{
+//   width: 100%;
+//   border:1px solid  #ff9d48;
+//   background-color: transparent!important;
+//   padding:1.5rem!important;
+//   height: 350px;
+//   .head{
+//     strong{
+//       color: $z-lightgray;
+//     }
+//   }
+// }
+// .ClinicianSpecialities{
+//   margin-top: 0px;
+//   border: none;
+//   background-color: $z-ocean;
+//   @include for-desktop-down{
+//     width: 48%;
+//     height: 50%;
+//   }
+//   @include for-tablet-landscape-down{
+//     width: 100%
+//   }
+//   .cli-cart{
+//     display: flex;
+//     justify-content: center;
+//   }
+// }
+// // pending invites
+//   .pendinginvites{
+//     width: 100%;
+//     margin-top: 1.5rem; 
+//     border-radius: 1.5rem;
+//     border:1px solid $z-lightgray;
+//     padding: 1rem;
+//     @include for-desktop-down{
+//       width: 48%;
+//       margin-top: 0px;
 
-.superAdmindasboard{
-  @include  for-desktop-down{
-    flex-direction: column;
-  }
-  @include for-laptop-view-down{
-    flex-wrap: wrap;
-  }
-  .rightCol{
-    width: 67%;
-    gap: 2rem;
-    @include for-laptop-view-down{
-      gap: 1rem;
-
-      }
+//     }
+//     @include for-tablet-landscape-down{
+//       width: 100%
+//     }
+//     .pendinginvites-heading {
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//       padding-bottom: 1rem;
+//       h4{
+//         margin: 0;
+//         font-size: $md-text;
+//         line-height: 1.75rem; 
+//         font-weight: 600; 
+//         color: $z-lightgray;
+//         padding:  0px 10px 0px 0px;
+        
+//       }
+//       a{
+//         font-size: 0.75rem;
+//         line-height: 1rem; 
+//         text-transform: uppercase; 
+//         color: #ff9d48;
+//         white-space: nowrap;
+//       }
+//     }
+//     .info{
+//       margin-bottom: 2rem;
+//       &:last-child{
+//         margin-bottom: 0px;
+//       }
+//     }
+//     .columns{
+//       width: 100%;
+//       padding: 1rem 1.25rem; 
+//       border-radius: 1.5rem; 
+//       background: #5a4468;
+//       .columnsHead{
+//         // width: 100;
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//         h4{
+//           margin: 0;
+//           font-size: $md-text;
+//           line-height: 1.75rem; 
+//           font-weight: 600; 
+//           color: $z-lightgray;
+//         }
+//         .icons{
+//           display: inline-flex;
+//           align-items: center;
+//           gap: 0.75rem;
+//         cursor: pointer;
+//           .icon{
+//             display: inline-flex; 
+//             padding: 0.25rem; 
+//             justify-content: center; 
+//             align-items: center; 
+//             border-radius: 9999px; 
+//             width: 1.5rem; 
+//             height: 1.5rem; 
+//             line-height: 1.75rem; 
+//             color: $z-lightgray;
+//             background: $z-orange-color;
+//             span{
+//               font-size: $lg-text;
+//             }
+//           }
+//           .tick{
+//             background-color:$z-teal;
+//           }
+//         }
+//       }
+//       p{
+//         margin-bottom: 0.75rem; 
+//         font-size: 0.875rem;
+//         line-height: 1.25rem; 
+//         color: $z-lightgray;
+//       }
+//       .invitation{
+//         @include for-tablet-landscape-down{
+//           justify-content: center;
+//         }
+//         .npi{
+//           display: inline-flex; 
+//           padding: 0.25rem 0.75rem; 
     
-    @include for-desktop-down{
-      width: 100%;
-      gap: 1rem;
-    }
-  }
-  .leftCol{
-    width: 33%;
-    
-    @include for-desktop-down{
-      width: 100%;
-      margin-top: 1rem;
-      gap: 1rem;
-      display: flex;
-      flex-wrap: wrap;
-    }
-  }
-  
-}
+//           justify-content: center; 
+//           align-items: center; 
+//           border-radius: 9999px; 
+//           font-size:$sx-text;
+//           line-height: 1.25rem; 
+//           font-weight: 600; 
+//           background:$z-lightgray;
+//         }
+//         .invitationDates{
+//           width: 100%;
+//           display: flex;
+//           align-items: center;
+//           justify-content: space-between;
+//           flex-wrap: wrap;
+//           p{
+//             display: flex; 
+//             gap: 0.25rem; 
+//             align-items: center; 
+//             font-size: $small-text;
+//             line-height: 1rem; 
+//             color: $z-lightgray;
+//             @include for-desktop-down{
+//               width: 100%;
+//             }
+//             .date{
+//               color: $z-teal;
+//               font-weight: 600;
+//             }
+//           }
+//           a{
+//             display: flex;
+//             align-items: center;
+//             gap: 0.5rem; 
+//             align-items: center; 
+//             font-size: $sx-text;
+//             line-height: 1.25rem; 
+//             color: $z-lightgray;
 
-
-.seekersList{
-  width: 100%;
-  padding: 1rem; 
-  margin: 1.5rem 0px; 
-  border-radius: 1rem; 
-  background: $z-lightgray;
-  .head{
-    margin-bottom: 0px;
-    color: $z-teal;
-  }
-  ul{
-    li{
-      display: flex;
-      justify-content: space-between;
-
-      padding: 0.75rem 0px;
-      .seekersListinner{
-        display: flex;
-        gap: 0.75rem;
-        align-items: center;
-        img{
-          width: 2rem;
-          height: 2rem;
-          border-radius: 9999px;
-        }
-        h5{
-          margin: 0;
-          a {
-            font-size:$md-text;
-            line-height: 1.75rem; 
-            font-weight: 600; 
-            line-height: 1; 
-            color: $z-teal;
-
-          }
-        }
-       
-      }
-      a{
-        display: inline-block; 
-        font-size: $small-text;
-        line-height: 1rem; 
-        font-weight: 600; 
-        color: $z-teal;
-
-      }
-    }
-  }
-  .view-all {
-    a {
-      color: $z-teal;
-      text-transform: capitalize;
-      margin-top: 0.75rem; 
-      font-size:$sx-text;
-      line-height: 1.25rem; 
-      text-align: center; 
-      color: #4EA692;
-      
-
-    }
-  }
-}
-
-.superAdminWellness{
-  width: 100%;
-  border:1px solid  #ff9d48;
-  background-color: transparent!important;
-  padding:1.5rem!important;
-  height: 350px;
-  .head{
-    strong{
-      color: $z-lightgray;
-    }
-  }
-}
-
-.ClinicianSpecialities{
-  margin-top: 0px;
-  border: none;
-  background-color: $z-ocean;
-  @include for-desktop-down{
-    width: 48%;
-    height: 50%;
-  }
-  @include for-tablet-landscape-down{
-    width: 100%
-  }
-  .cli-cart{
-    display: flex;
-    justify-content: center;
-  }
-}
-
-// pending invites
-
-.pendinginvites{
-  width: 100%;
-  margin-top: 1.5rem; 
-  border-radius: 1.5rem;
-  border:1px solid $z-lightgray;
-  padding: 1rem;
-  @include for-desktop-down{
-    width: 48%;
-    margin-top: 0px;
-
-  }
-  @include for-tablet-landscape-down{
-    width: 100%
-  }
-  .pendinginvites-heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 1rem;
-    h4{
-      margin: 0;
-      font-size: $md-text;
-      line-height: 1.75rem; 
-      font-weight: 600; 
-      color: $z-lightgray;
-      padding:  0px 10px 0px 0px;
-      
-    }
-    a{
-      font-size: 0.75rem;
-      line-height: 1rem; 
-      text-transform: uppercase; 
-      color: #ff9d48;
-      white-space: nowrap;
-    }
-  }
-  .info{
-    margin-bottom: 2rem;
-    &:last-child{
-      margin-bottom: 0px;
-    }
-  }
-  .columns{
-    width: 100%;
-    padding: 1rem 1.25rem; 
-    border-radius: 1.5rem; 
-    background: #5a4468;
-    .columnsHead{
-      // width: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      h4{
-        margin: 0;
-        font-size: $md-text;
-        line-height: 1.75rem; 
-        font-weight: 600; 
-        color: $z-lightgray;
-      }
-      .icons{
-        display: inline-flex;
-        align-items: center;
-        gap: 0.75rem;
-      cursor: pointer;
-        .icon{
-          display: inline-flex; 
-          padding: 0.25rem; 
-          justify-content: center; 
-          align-items: center; 
-          border-radius: 9999px; 
-          width: 1.5rem; 
-          height: 1.5rem; 
-          line-height: 1.75rem; 
-          color: $z-lightgray;
-          background: $z-orange-color;
-          span{
-            font-size: $lg-text;
-          }
-        }
-        .tick{
-          background-color:$z-teal;
-        }
-      }
-    }
-    p{
-      margin-bottom: 0.75rem; 
-      font-size: 0.875rem;
-      line-height: 1.25rem; 
-      color: $z-lightgray;
-    }
-    .invitation{
-      @include for-tablet-landscape-down{
-        justify-content: center;
-      }
-      .npi{
-        display: inline-flex; 
-        padding: 0.25rem 0.75rem; 
-   
-        justify-content: center; 
-        align-items: center; 
-        border-radius: 9999px; 
-        font-size:$sx-text;
-        line-height: 1.25rem; 
-        font-weight: 600; 
-        background:$z-lightgray;
-      }
-      .invitationDates{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        p{
-          display: flex; 
-          gap: 0.25rem; 
-          align-items: center; 
-          font-size: $small-text;
-          line-height: 1rem; 
-          color: $z-lightgray;
-          @include for-desktop-down{
-            width: 100%;
-          }
-          .date{
-            color: $z-teal;
-            font-weight: 600;
-          }
-        }
-        a{
-          display: flex;
-          align-items: center;
-          gap: 0.5rem; 
-          align-items: center; 
-          font-size: $sx-text;
-          line-height: 1.25rem; 
-          color: $z-lightgray;
-
-        }
-      }
-    }
-  }
-}
-
-
-
-
-// 
+//           }
+//         }
+//       }
+//     }
+//   }
+// // 

@@ -1,0 +1,21 @@
+<div class="orginzationOuter" [ngStyle]="{'border':config.border}">
+    <div class="head" [ngStyle]="{'color':config.textColor}">
+        <strong>{{config.heading}}</strong>
+        <p>{{config.total}}</p>
+    </div>
+    <ul class="Organizationslists">
+        @for (info of config.userInfo; track $index) {
+        <li>
+            <div class="userinfo">
+                <h5 class="h5_tag" [ngStyle]="{ 'color': hover ? config.textColor2 : config.textColor}"><a>{{info.userName}}</a></h5>
+                <span [ngStyle]="{'color':config.textColor1}">{{info.specialist}}</span>
+            </div>
+            <span class="patientalloted" [ngStyle]="{'color':config.textColor1}">{{info.patients}}</span>
+        </li>
+    }
+    </ul>
+    <div class="view-all" [ngStyle]="{'color':config.textColor}">
+        <a><span class="material-symbols-outlined">{{config.icon}}</span>
+            {{config.button}}</a>
+    </div>
+</div>

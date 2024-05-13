@@ -1,0 +1,70 @@
+<div class="navigation-menus" >
+    <div class="buble-container ring ring-8" [ngClass]="{'is-active': isActive}" (click)="toggleActive()">
+        <div class="bubble-top"></div>
+    </div>
+    <div class="blobs" (click)="toggleActive()">
+        <div class="circle-styles main-circle">
+            <div class="bg"></div>
+            <div class="cross center wobble">
+                <img src="../../../../assets/images/infinity.svg"  alt="infinity"/>
+            </div>
+        </div>
+
+        <a href="javascript:void(0)"  class="circles circle-styles navLinks thirteen center" [ngClass]="{'show': isActive}">
+            <span class="material-symbols-outlined">contract</span>
+            <div class="tooltips">Contract Management</div>
+        </a>
+        <a href="javascript:void(0)"  class="circles circle-styles navLinks thirteen center" [ngClass]="{'show': isActive}">
+            <span class="material-symbols-outlined">receipt_long</span>
+            <div class="tooltips">Transactions</div>
+        </a>
+        <a href="javascript:void(0)"  class="circles circle-styles navLinks twelve center" [ngClass]="{'show': isActive}">
+            <span class="material-symbols-outlined">manage_accounts</span>
+            <div class="tooltips">Staff Management</div>
+        </a>
+        <a href="javascript:void(0)" class="circles circle-styles navLinks eleven center" [ngClass]="{'show': isActive}">
+            <span class="material-symbols-outlined">folder_managed</span>
+            <div class="tooltips">Roles Permission</div>
+        </a>
+        <a href="javascript:void(0)"  class="circles circle-styles navLinks ten center" [ngClass]="{'show': isActive}">
+            <span class="material-symbols-outlined">handshake</span>
+            <div class="tooltips">Manage Organizations</div>
+        </a>
+        <a href="javascript:void(0)" class="circles circle-styles navLinks nine center" [ngClass]="{'show': isActive}">
+            <span class="material-symbols-outlined">communities</span>
+            <div class="tooltips">Space</div>
+        </a>
+        <a href="javascript:void(0)" class="circles circle-styles navLinks eight center" [ngClass]="{'show': isActive}">
+            <span class="material-symbols-outlined">description</span>
+            <div class="tooltips">Consent Form</div>
+        </a>
+        <a href="javascript:void(0)" class="circles circle-styles navLinks seven center" [ngClass]="{'show': isActive}">
+            <span class="material-symbols-outlined">psychology_alt</span>
+            <div class="tooltips">Questionnaire Management</div>
+        </a>
+        <a href="javascript:void(0)" class="circles circle-styles navLinks sixth center" [ngClass]="{'show': isActive}">
+            <span class="material-symbols-outlined">analytics</span>
+            <div class="tooltips">Assessment Management</div>
+        </a>
+        <a href="javascript:void(0)" class="circles circle-styles navLinks fifth center" [ngClass]="{'show': isActive}">
+            <span class="material-symbols-outlined">psychology</span>
+            <div class="tooltips">Wellness Plan</div>
+        </a>
+        <a href="javascript:void(0)" class="circles circle-styles navLinks forth center" [ngClass]="{'show': isActive}">
+            <span class="material-symbols-outlined">event_note</span>
+            <div class="tooltips">Appointments</div>
+        </a>
+        <a href="javascript:void(0)"  class="circles circle-styles navLinks third center" [ngClass]="{'show': isActive}">
+            <span class="material-symbols-outlined">subscriptions</span>
+            <div class="tooltips">Subcription Plan</div>
+        </a>
+        <a href="/seeker" class="circles circle-styles navLinks second center" [ngClass]="{'show': isActive}">
+            <span class="material-symbols-outlined">personal_injury</span>
+            <div class="tooltips">Seeker Management</div>
+        </a>
+        <a href="javascript:void(0)" class="circles circle-styles navLinks first center" [ngClass]="{'show': isActive}">
+            <span class="material-symbols-outlined">dashboard</span>
+            <div class="tooltips">Dashboard</div>
+        </a>
+    </div>
+</div> 

@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { FeaturesRoutingModule } from './features-routing.module';
 import { FeatureWrapperComponent } from './feature-wrapper.component';
@@ -9,6 +8,7 @@ import { UiModule } from 'libs/ui/src/modules/ui/ui.module';
 import {
   CommonCarouselComponent,
   DynamicComponentDirective,
+  DynamicFieldDirective,
   ZAreaChartComponent,
   ZBarChartComponent,
   ZCarousel3dComponent,
@@ -18,26 +18,31 @@ import {
 } from '@zumlo/ui';
 import { MainLayoutModule } from '../main-layout/main-layout.module';
 import { SeekerDashboardComponent } from './components/z-seeker-dashboard/seeker-dashboard.component';
+import { BottomMenuComponent } from "./components/bottom-menu/bottom-menu.component";
+import { SideMenuComponent } from './components/side-bottom-menu/side-menu.component';
 
 @NgModule({
-  declarations: [
-    FeatureWrapperComponent,
-    SuperAdminDashboardComponent,
-    ClinicianDashboardComponent,
-    SeekerDashboardComponent,
-  ],
-  imports: [
-    FeaturesRoutingModule,
-    UiModule,
-    MainLayoutModule,
-    CommonCarouselComponent,
-    ZLineChartComponent,
-    ZPieChartComponent,
-    ZDonutChartComponent,
-    ZBarChartComponent,
-    ZAreaChartComponent,
-    ZCarousel3dComponent,
-    DynamicComponentDirective
-  ],
+    declarations: [
+        FeatureWrapperComponent,
+        SuperAdminDashboardComponent,
+        ClinicianDashboardComponent,
+        SeekerDashboardComponent,
+    ],
+    imports: [
+        FeaturesRoutingModule,
+        UiModule,
+        MainLayoutModule,
+        CommonCarouselComponent,
+        ZLineChartComponent,
+        ZPieChartComponent,
+        ZDonutChartComponent,
+        ZBarChartComponent,
+        ZAreaChartComponent,
+        ZCarousel3dComponent,
+        DynamicComponentDirective,
+        DynamicFieldDirective,
+        BottomMenuComponent,
+        SideMenuComponent
+    ]
 })
 export class FeaturesModule {}

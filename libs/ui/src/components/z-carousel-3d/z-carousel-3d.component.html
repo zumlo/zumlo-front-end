@@ -3,15 +3,15 @@
     <div style="position:relative" class="carouselInner">
         <div class="carousel" >
             @for (item of config; track $index) {
-                <div #cell class="carousel__cell" [ngClass]="this.selectedIndex == $index ?  'active': this.selectedIndex+1 == $index ? 'sliderImgtOne' : this.selectedIndex+2 == $index ? 'sliderImgtTwo' : '' " >
+                <div #cell class="carousel__cell" [ngStyle]="{'box-shadow':item.boxShadow, 'backgroundColor':item.bgColor}" [ngClass]="this.selectedIndex == $index ?  'active': this.selectedIndex+1 == $index ? 'sliderImgtOne' : this.selectedIndex+2 == $index ? 'sliderImgtTwo' : '' " >
                         <div class="sliderInner">
                           <div class="dateTime">
-                            <p>{{item.type}}</p>
-                            <span>Tue, 02 Jan, 2024</span>
+                            <p [ngStyle]="{'backgroundColor':item.bgColor1, 'color':item.textColor}">{{item.type}}</p>
+                            <span [ngStyle]="{'color':item.textColor}">Tue, 02 Jan, 2024</span>
                           </div>
                           <div class="lifestyle">
-                            <h3>{{item.heading}}</h3>
-                            <p>
+                            <h3 [ngStyle]="{'color':item.textColor}">{{item.heading}}</h3>
+                            <p  [ngStyle]="{'color':item.textColor}">
                               {{item.description}}
                             </p>
                           </div>

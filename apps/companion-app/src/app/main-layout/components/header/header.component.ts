@@ -16,13 +16,7 @@ export class HeaderComponent {
 
   @ViewChild('navbarToggleButton') navbarToggleButton!: ElementRef;
 
-  constructor(
-    private renderer: Renderer2,
-    private _router: Router,
-    private storageService: ZStorageService,
-    private dialog: MatDialog,
-    private _eref: ElementRef
-  ) {
+  constructor(private dialog: MatDialog, private renderer: Renderer2, private _router: Router, private storageService: ZStorageService, private _eref: ElementRef) {
     this.renderer.listen('window', 'click', (e: Event) => {
       if (e.target !== this.navbarToggleButton?.nativeElement) {
         this.showMenu = false;
@@ -40,7 +34,6 @@ export class HeaderComponent {
     if (!this.showMenu) {
     }
   }
-
 
   profileBtn() {
     this.showProfile = !this.showProfile;
@@ -60,7 +53,6 @@ export class HeaderComponent {
     }
   }
 
-
   logout() {
     let dialogRef = this.dialog.open(ZDialogComponent, {
       width: '400px',
@@ -72,8 +64,7 @@ export class HeaderComponent {
       },
     });
     dialogRef.afterClosed().subscribe((res: any) => {
-      if (res) this.storageService.clearSessionStorage();
-      this._router.navigateByUrl('/auth');
+      if (res != undefined) this.storageService.clearSessionStorage(); this._router.navigateByUrl('/auth');
     });
   }
 }

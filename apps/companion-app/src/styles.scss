@@ -11,6 +11,8 @@
 @import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 @import 'ngx-toastr/toastr';
+@import 'assets/styles/common-file/widgets.scss';
+
 * {
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
@@ -72,17 +74,14 @@ img{
 .sliderInner{
     width: 100%;
     .dateTime{
-        // width: 100%;
-        // display: flex;
-        // align-items: center;
-        // justify-content: space-between;
+      
     }
 }
 .col-6{
     max-width: 50%;
     width: 50%;
 }
-.toast-container .toast-info, .toast-container .toast-error {
+.toast-container .toast-info {
     background-color: #ff9d48;
     box-shadow: none;
      &:hover{
@@ -104,3 +103,14 @@ img{
         box-shadow: none!important;
     }
 }
+
+.iconBtn  {
+    color: red;
+    button.mat-mdc-raised-button:not(:disabled) {
+        background-color: transparent;
+        width: auto;
+        box-shadow: none;
+    }
+}
+
+

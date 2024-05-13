@@ -1,10 +1,18 @@
-
-
-<mat-tab-group class="mdc-tab-indicator--active">
-    @for (config of configs; track $index) {
-    <mat-tab [label]="config.name">
-        <z-table [tableConfig]="tableConfig" (tableDataOutput)="receiveTableData($event)"></z-table>
-    </mat-tab>
-}
+<mat-tab-group
+  class="mdc-tab-indicator--active"
+  #tabGroup
+  (selectedTabChange)="tabChanged($event)"
+>
+  @for (item of config; track $index) {
+  <mat-tab [label]="item.name">
+    @if(item.tableConfig){
+    <z-table
+      [tableConfig]="
+        item.tableConfig | search : ($index == selectedTab ? searchData : '')
+      "
+      (tableDataOutput)="receiveTableData($event)"
+    ></z-table>
+    }
+  </mat-tab>
+  }
 </mat-tab-group>
-

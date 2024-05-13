@@ -1,6 +1,7 @@
+import { FieldConfig } from "../models/fieldConfig";
 import { reg } from "./regex";
 
-export const loginFields: any = [
+export const LoginFieldsConfigs:FieldConfig[] = [
     {
         name: 'Email',
         key: 'email',

@@ -1,0 +1,85 @@
+@import "../../../../../apps/companion-app/src/assets/styles/color-variables";
+@import "../../../../../apps/companion-app/src/assets/styles/typography";
+@import "../../../../../apps/companion-app/src/assets/styles/mixin";
+
+.tredingAssesmentlist{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    // background-color: $z-ocean;
+    margin-top: 1rem;
+    
+    ul{
+        margin: 0px;
+        li{
+            .column {
+                a{
+                    font-size: $lg-text;
+                    line-height: 1.75rem; 
+                    font-weight: 600; 
+                    // color: $z-lightgray;
+                    width: 90%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    display: block;
+
+                }
+                p{
+                    margin-bottom: 0.75rem; 
+                    border-radius: 1.5rem; 
+                    line-height: 1.25rem; 
+                    font-weight: 500; 
+                    // color: $z-orange-color;
+                    font-size: $sx-text;
+                }
+                .appointmentType{
+                    display: inline-flex;
+                    gap: 0.5rem;
+                    align-items: center;
+                    p{
+                        padding: 0.25rem 0.5rem; 
+                        border-radius: 9999px; 
+                        font-size: $sx-text;
+                        line-height: 1.25rem; 
+                        font-weight: 700; 
+                        // background: $z-byzantine-lite-2;
+                        // color: $z-lightgray;
+                    //    &:nth-child(2){      
+                    //         background-color: $z-teal;
+                    //    }                               
+                    }
+                }
+            }
+        }
+
+        .enroll{
+            .image_block {
+                img{
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
+                a{
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    font-weight: 500;
+                    font-size: $small-text;
+                    background-color: $z-lightgray;
+                    color:$z-ocean;
+                    display: flex;
+                    align-items: center;
+                }
+                span{
+                    color: $z-lightgray;
+                    font-weight: 700;
+                    font-size:$xlg-text;
+                    line-height: 2.5rem;
+                }
+            }
+        }
+    }
+
+    p{
+        margin: 0;
+    }
+}

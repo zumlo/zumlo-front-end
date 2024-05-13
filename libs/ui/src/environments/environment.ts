@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://zumloapi.azurewebsites.net/api'
+  apiUrl: 'https://zumloapi.azurewebsites.net/api',
+  employesApi: "http://localhost:3000",
 };
 
 /*
