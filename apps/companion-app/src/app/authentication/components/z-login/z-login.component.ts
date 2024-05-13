@@ -30,7 +30,6 @@ export class ZLoginComponent implements OnInit, OnDestroy {
         if(objects[0]) {
           this.data = objects[0].ecd;
           this.data = JSON.parse(atob(this.data))
-          debugger
           this.form.patchValue({
             email: this.data.email,
             password: this.data.password,
@@ -55,7 +54,7 @@ export class ZLoginComponent implements OnInit, OnDestroy {
     this.subscription.add(this.authentication.loginRoute(requiredData).subscribe({
       next: (res: any) => {
         
-        if(res.success){debugger
+        if(res.success){
           // This will set the encrypted data of user's credential when remember me is checked
           if(this.form.value.remember && !this.data) {
             this.indexDb.addObject(requiredData);
