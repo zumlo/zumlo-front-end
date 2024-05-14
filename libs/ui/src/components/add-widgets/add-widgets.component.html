@@ -1,11 +1,14 @@
-<div class="add" (click)="showWidget()" [ngStyle]="{'border':config.border}">
-    <span
-      class="material-symbols-outlined "
-      data-drawer-target="drawer-right-example"
-      data-drawer-show="drawer-right-example"
-      data-drawer-placement="top"
-      aria-controls="drawer-right-example" [ngStyle]="{'color':config.color}">
-      {{config.icon}}
-    </span>
-    <div class="tooltip">{{config.tooltip}}</div>
-  </div>
+<div class="add" (click)="showWidgetDropdown = true" [ngStyle]="{ border: config.border }">
+  <span
+    class="material-symbols-outlined"
+    data-drawer-target="drawer-right-example"
+    data-drawer-show="drawer-right-example"
+    data-drawer-placement="top"
+    aria-controls="drawer-right-example"
+    [ngStyle]="{ color: config.color }"
+  >
+    {{ config.icon }}
+  </span>
+  <div class="tooltip">{{ config.tooltip }}</div>
+</div>
+<z-jumbodropdown [show]="showWidgetDropdown" (hideWidget)="showWidgetDropdown = false"></z-jumbodropdown>

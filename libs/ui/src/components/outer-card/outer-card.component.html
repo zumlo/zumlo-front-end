@@ -10,7 +10,7 @@
             <a [ngStyle]="{'color':config.color}">{{config.button}}</a>
         }
         @if(config.type == "trendingAssessment"){
-            <span class="material-symbols-outlined rightArrow">{{config.icon}}</span>
+            <!-- <span class="material-symbols-outlined rightArrow">{{config.icon}}</span> -->
         }
         <div class="listGridOuter">
         @for (config of config.innerComponent; track $index) {

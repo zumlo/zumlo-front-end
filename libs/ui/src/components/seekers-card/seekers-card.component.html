@@ -7,7 +7,6 @@
         @for (info of config.patientInfo; track $index) {
         <li>
             <div class="seekersListinner">
-                <!-- <img src="../../../../assets/images/user-1.jpg" alt="user photo" /> -->
                 <img [src]="info.url" alt="user photo" />
                 <h5><a [ngStyle]="{'color':config.textColor}">{{info.seekerName}}</a></h5>
             </div>

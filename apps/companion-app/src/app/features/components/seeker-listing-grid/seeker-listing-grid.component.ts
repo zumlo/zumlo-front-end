@@ -52,9 +52,9 @@ export class SeekerListingGridComponent {
   ) {
     this.form = formCreator.getFormGroup(this.configs);
 
-    this.service.getHealthConditions().subscribe((response: any) => {
-      response;
-    });
+    // this.service.getHealthConditions().subscribe((response: any) => {
+    //   response;
+    // });
     this.getSeekerData();
   }
 

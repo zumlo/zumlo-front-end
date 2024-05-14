@@ -48,6 +48,7 @@ export * from './components/organization-card/organization-card.component';
 export * from './components/seekers-card/seekers-card.component';
 export * from './components/pending-invites-card/pending-invites-card.component';
 export * from './components/add-widgets/add-widgets.component';
+export * from './components/jumbodropdown/jumbodropdown.component';
 
 // directives
 export * from './directives/dynamic-field/dynamic-field.directive';

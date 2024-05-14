@@ -707,7 +707,7 @@ ul {
 // orgization css
 .orginzationOuter {
   padding: 1rem;
-  margin-top: 1.5rem;
+  // margin-top: 1.5rem;
   border-radius: 1rem;
   border-width: 1px;
   // border: 1px solid $z-teal;
@@ -774,7 +774,7 @@ ul {
 .seekersList {
   width: 100%;
   padding: 1rem;
-  margin: 1.5rem 0px;
+  // margin: 1.5rem 0px;
   border-radius: 1rem;
   // background: $z-lightgray;
   .head {
@@ -834,6 +834,10 @@ ul {
 .superAdmindasboard {
   .z-dashboard-col-1 {
     width: 32%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-content: flex-start;
     @include for-laptop-view-down{
       width: 47%;
     }
@@ -846,6 +850,8 @@ ul {
     width: 30%;
     display: flex;
     flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 1.5rem;
     @include for-laptop-view-down{
       width: 47%;
     }
@@ -1003,7 +1009,7 @@ ul {
 
 // onboardOrganizationOtr
 .onboardOrganizationOtr{
-  width: 85%;
+  width: 83%;
   .plansTypes{
     margin-top: 0px;
   }
@@ -1040,10 +1046,10 @@ ul {
   .listGridOuter{
     width: 100%;
   }
-  .tredingAssesments{
-    padding: 0!important;
-    margin: 0!important;
-  }
+  // .tredingAssesments{
+  //   padding: 0!important;
+  //   margin: 0!important;
+  // }
   .tredingAssesmentsheading{
     padding-bottom: 1rem;
     flex-wrap: wrap;
@@ -1070,7 +1076,7 @@ ul {
     }
   }
   .info{
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem !important;
     &:last-child{
       margin-bottom: 0px;
     }
@@ -1178,4 +1184,150 @@ ul {
 
 .OuterCardOtr{
   width: 100%;
+}
+
+.carousel3d {
+  .carousel{
+      position: relative;
+      top: 10px;  
+      .carousel__cell {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        transition: width 1s;
+        width: 250px;
+        z-index: 10;
+        border-radius: 1rem;
+        height: 210px;
+        overflow: hidden;
+        @include for-laptop-view-down{
+          height: 198px;
+        }
+        @include for-tablet-landscape-down{
+          width: 340px !important;
+          height: 183px;
+      }
+      
+      @include for-tablet-portrait-up{
+          width: 400px !important;
+      }
+      @include for-ipad-landscape{
+          width: 480px !important;
+      }
+        &.active {
+          width: 390px !important;
+          left: -177px !important;
+          transition: left 1s;
+          @include for-landscape-down {
+              width: 330px!important;
+          }
+          @include for-laptop-view-down{
+              width: 270px!important;
+          }
+          @include for-desktop-down{
+              width: 360px !important;
+          }
+          @include for-tablet-landscape-down{
+              width: 300px !important;
+
+          }
+          @include for-tablet-portrait-up{
+              width: 520px !important;
+          }
+          @include for-ipad-landscape {
+              width: 430px !important;
+          }
+       
+        }
+      }
+
+  }
+  
+  .btn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    border: none;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 80px;
+    z-index: 9999;
+    background-color: $z-teal;
+  //box-shadow: 0px 0px 10px #00000047;;
+    color: $z-lightgray;
+    @include for-tablet-landscape-down{
+      right: 70px;
+    }
+    @include for-laptop-view-down{
+      height: 30px;
+      width:30px;
+    }
+    &.prevbtn {
+      right: unset;
+      left: -40px;
+      z-index: 9999;
+      transform: rotate(180deg);
+      display: none;
+  }
+  }
+}
+
+
+
+:host{
+  z-outer-card{
+    width: 100%;
+  }
+}
+
+
+
+
+.owl-prev {
+  right: unset;
+  left: 0;
+  display: none;
+}
+.listGridOuter{
+.owl-nav{
+.owl-next,
+.owl-prev {
+  opacity: 0;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+
+}
+&::after {
+  position: absolute;
+  content: '>';
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: $z-byzantine-lite-2;
+  right: 0;
+  top: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  color: $z-lightgray;
+  font-size: $sub-caption;
+  border-radius: 100%;
+  text-align: center;
+}
+}
 }
